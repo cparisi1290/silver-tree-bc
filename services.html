@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silver Tree | Our Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'deep-plum': '#4a3c5c',
+              'copper': '#b87333',
+              'light-text': '#ffffff',
+              'dark-text': '#333333'
+            },
+            fontFamily: {
+              'serif': ['DM Serif Display', 'serif'],
+              'sans': ['Montserrat', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+    
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+
+    
+    <!-- Navigation will be injected here -->
+    <div id="nav-placeholder"></div>
+    <div class="container">
+
+        <!-- Services Hero Section -->
+        <section class="services-hero">
+            <div class="services-hero-card">
+                <h1>Hire Experts. Get Work Done. Scale Faster.</h1>
+                <p>Silver Tree provides the stability and the strategy small business owners need to move past the "stuck" phase and into growth.</p>
+                <a href="#" class="primary-btn">Get Started Now →</a>
+            </div>
+        </section>
+
+        <section class="diff-section container">
+            <div class="diff-grid">
+                <div class="diff-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80">                
+                </div>
+                <div class="diff-content">
+                    <p class="diff-label">Silver Tree Edge</p>
+                    <h2 class="diff-title">What Makes Us Different?</h2>
+                    <p>We combine a Master's-level understanding of psychology with a decade of operational expertise. We align your business with your natural rhythms.</p>
+                    <div class="diff-features">
+                        <div class="diff-feature"><h4>Psychology-Backed</h4><p>Decisions based on human behavior.</p></div>
+                        <div class="diff-feature"><h4>Process Oriented</h4><p>Reliable foundations for flight.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="tabs-nav">
+            <button class="services-tab-btn active" onclick="openService(event, 'consulting')">Consulting</button>
+            <button class="services-tab-btn" onclick="openService(event, 'recruiting')">Recruiting</button>
+            <button class="services-tab-btn" onclick="openService(event, 'va')">VA Support</button>
+            <button class="services-tab-btn" onclick="openService(event, 'workshops')">Workshops</button>
+        </div>
+
+        <div class="tabs-container">
+            <div id="consulting" class="tabs-panel active">
+                <div class="services-service-flex">
+                    <div class="tabs-img">
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80">
+                        <div class="services-prog-circle">
+                            <span class="prog-circle-number">92%</span>
+                            <span class="prog-circle-label">Focus</span>
+                        </div>
+                    </div>
+                    <div class="tabs-text">
+                        <h2>Business Consulting</h2>
+                        <p>Break through the plateau. We use psychology-backed time management and solution-focused strategies to get you back on track.</p>
+                        <ul class="tabs-check-list">
+                            <li>Operational Roadmaps</li>
+                            <li>Executive Efficiency Audits</li>
+                            <li>Growth Strategy Design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="recruiting" class="tabs-panel">
+                <div class="services-service-flex services-flex-reverse">
+                    <div class="tabs-img">
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2959213?auto=format&fit=crop&w=800&q=80">
+                        <div class="services-prog-circle">
+                            <span class="prog-circle-number copper">100%</span>
+                            <span class="prog-circle-label">Match</span>
+                        </div>
+                    </div>
+                    <div class="tabs-text">
+                        <h2>Staff Recruiting</h2>
+                        <p>Stop the revolving door. Our unique 4-step interactive interview process ensures you hire the right fit the first time.</p>
+                        <ul class="services-check-list">
+                            <li>Values-Based Hiring</li>
+                            <li>Interactive Interview Vetting</li>
+                            <li>Team-Fit Integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="va" class="tabs-panel">
+                <div class="services-service-flex">
+                    <div class="tabs-img">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80">
+                        <div class="services-prog-circle">
+                            <span class="prog-circle-number">15+</span>
+                            <span class="prog-circle-label">Weekly Hrs</span>
+                        </div>
+                    </div>
+                    <div class="tabs-text">
+                        <h2>Virtual Support</h2>
+                        <p>Offload the busy work. From data entry to executive scheduling, we handle the details so you can lead your business.</p>
+                        <ul class="services-check-list">
+                            <li>Inbox & Calendar Management</li>
+                            <li>Data Organization</li>
+                            <li>Client Coordination</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="workshops" class="tabs-panel">
+                <div class="services-service-flex services-flex-reverse">
+                    <div class="tabs-img">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80">
+                        <div class="services-prog-circle">
+                            <span class="prog-circle-number copper">4.9/5</span>
+                            <span class="prog-circle-label">Rating</span>
+                        </div>
+                    </div>
+                    <div class="tabs-text">
+                        <h2>Workshops</h2>
+                        <p>Custom-built training for your team, delivered in-person or virtually, to solve your specific bottlenecks and scale skillsets.</p>
+                        <ul class="services-check-list">
+                            <li>Workflow Optimization</li>
+                            <li>Communication Training</li>
+                            <li>Custom SOP Development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="services-timeline-section container">
+            <h2 class="timeline-title">Process Timeline – 6 Options</h2>
+            <div class="services-timeline-path">
+                <div class="services-timeline-grid">
+                    <div class="services-step-box services-s-1">
+                        <div class="services-balloon"><span>01</span></div>
+                        <div class="services-step-desc"><h4>Discovery</h4><p>We analyze your current rhythms.</p></div>
+                        <div class="services-node"></div>
+                    </div>
+                    <div class="services-step-box services-s-2">
+                        <div class="services-node"></div>
+                        <div class="services-balloon balloon-offset"><span>02</span></div>
+                        <div class="services-step-desc"><h4>Audit</h4><p>Finding the efficiency leaks.</p></div>
+                    </div>
+                    <div class="services-step-box services-s-3">
+                        <div class="services-balloon"><span>03</span></div>
+                        <div class="services-step-desc"><h4>Strategy</h4><p>Architecting the custom plan.</p></div>
+                        <div class="services-node"></div>
+                    </div>
+                    <div class="services-step-box services-s-4">
+                        <div class="services-node"></div>
+                        <div class="services-balloon balloon-offset"><span>04</span></div>
+                        <div class="services-step-desc"><h4>Alignment</h4><p>Syncing the team and vision.</p></div>
+                    </div>
+                    <div class="services-step-box services-s-5">
+                        <div class="services-balloon"><span>05</span></div>
+                        <div class="services-step-desc"><h4>Execution</h4><p>Implementation begins now.</p></div>
+                        <div class="services-node"></div>
+                    </div>
+                    <div class="services-step-box services-s-6">
+                        <div class="services-node"></div>
+                        <div class="services-balloon balloon-offset"><span>06</span></div>
+                        <div class="services-step-desc"><h4>Growth</h4><p>Scalable results achieved.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Testimonial will be injected here -->
+        <div id="testimonial-placeholder"></div>
+
+    <!-- CTA will be injected here -->
+    <div id="cta-placeholder"></div>
+
+    <!-- Footer will be injected here -->
+    <div id="footer-placeholder"></div>
+
+    <script src="./assets/js/components.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

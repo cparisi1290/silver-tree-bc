@@ -10,73 +10,101 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'deep-plum': '#664875',
+              'copper': '#CC9466',
+              'powder-blue': '#bdd4e0',
+              'blue': '#4e70af',
+              'warm-grey': '#cabcb0',
+              'light-text': '#f7f5f3',
+              'dark-text': '#160F1A'
+            },
+            fontFamily: {
+              'serif': ['DM Serif Display', 'serif'],
+              'sans': ['Poppins', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+    
     <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
 
-<!-- Navigation will be injected here -->
-<div id="nav-placeholder"></div>
+    <!-- Navigation will be injected here -->
+    <div id="nav-placeholder"></div>
 
     <div class="container">
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Hire Experts. Get Work Done. Scale Faster.</h1>
-                <p>Connect with top-tier freelancers to accelerate your projects.</p>
-                <div class="hero-buttons">
-                    <button class="primary-btn">Get Started</button>
-                    <button class="tertiary-btn">Explore Services</button>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hire Experts. Get Work Done. Scale Faster.</h1>
+            <p>Connect with top-tier freelancers to accelerate your projects.</p>
+            <div class="hero-buttons">
+                <button class="primary-btn">Get Started</button>
+                <button class="tertiary-btn">Explore Services</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="./assets/images/hero-coffee-chat.jpg" alt="Team working">
+        </div>
+    </section>
+
+    <section class="who-we-help">
+        <div class="container">
+            <h2>Who We Help</h2>
+            <p>Tailored solutions for every stage of your business journey.</p>
+
+            <div class="help-grid">
+                <div class="help-card">
+                    <div class="icon"><i class="fa-solid fa-bolt fa-2xl"></i></div>
+                    <h3>Sole Proprietors</h3>
+                    <p>We help new founders build a foundation that scales from day one.</p>
+                </div>
+
+                <div class="help-card">
+                    <div class="icon"><i class="fas fa-user-shield fa-2xl"></i></div>
+                    <h3>Small Business Owners</h3>
+                    <p>Helping the backbone of our community grow their digital presence.</p>
+                </div>
+
+                <div class="help-card">
+                    <div class="icon"><i class="fa-solid fa-business-time fa-2xl"></i></div>
+                    <h3>Medium Sized Businesses</h3>
+                    <p>Streamlining complex workflows for large-scale operations.</p>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="./assets/images/hero-coffee-chat.jpg" alt="Team working">
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="who-we-help">
-            <div class="container">
-                <h2>Who We Help</h2>
-                <p>Tailored solutions for every stage of your business journey.</p>
-
-                <div class="help-grid">
-                    <div class="help-card">
-                        <div class="icon"><i class="fa-solid fa-bolt fa-2xl"></i></div>
-                        <h3>Sole Proprietors</h3>
-                        <p>We help new founders build a foundation that scales from day one.</p>
+    <section class="services-section">
+        <div class="services-container">
+            <h2 class="services-title">Let's work together!</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image-wrapper">
+                        <img src="./assets/images/biz-consulting.jpg" alt="Business Consulting" class="service-image">
                     </div>
-
-                    <div class="help-card">
-                        <div class="icon"><i class="fas fa-user-shield fa-2xl"></i></div>
-                        <h3>Small Business Owners</h3>
-                        <p>Helping the backbone of our community grow their digital presence.</p>
+                    <div class="service-title-box">
+                        <h3>Business Consulting</h3>
                     </div>
-
-                    <div class="help-card">
-                        <div class="icon"><i class="fa-solid fa-business-time fa-2xl"></i></div>
-                        <h3>Medium Sized Businesses</h3>
-                        <p>Streamlining complex workflows for large-scale operations.</p>
-                    </div>
+                    <p class="service-description">Targeted campaigns built for growth. Strategic solutions to scale your business effectively.</p>
+                    <button class="secondary-btn">Learn More</button>
                 </div>
-            </div>
-        </section>
-
-        <section class="services-section">
-            <div class="services-container">
-                <h2 class="services-title">Let's work together!</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-image-wrapper">
-                            <img src="./assets/images/biz-consulting.jpg" alt="Business Consulting" class="service-image">
-                        </div>
-                        <div class="service-title-box">
-                            <h3>Business Consulting</h3>
-                        </div>
-                        <p class="service-description">Targeted campaigns built for growth. Strategic solutions to scale your business effectively.</p>
-                        <button class="secondary-btn">Learn More</button>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-image-wrapper">
-                            <img src="./assets/images/va.jpg" alt="Virtual Assistance" class="service-image">
+                
+                <div class="service-card">
+                    <div class="service-image-wrapper">
+                        <img src="./assets/images/va.jpg" alt="Virtual Assistance" class="service-image">
                         </div>
                         <div class="service-title-box">
                             <h3>Virtual Assistance</h3>
@@ -110,29 +138,8 @@
             </div>
         </section>
 
-        <section class="testimonial">
-            <div class="testimonial-content">
-                <i class="fas fa-quote-left quote-icon-fa"></i>
-                <blockquote>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
-                </blockquote>
-                <div class="testimonial-author">
-                    <strong>Blossom Menezes</strong><br>
-                    <small>Marketing Director</small>
-                </div>
-                <div class="testimonial-nav">
-                    <button class="arrow-button prev">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button class="arrow-button next">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="testimonial-image">
-                <img src="https://images.unsplash.com/photo-1494790108755-2616b332c6cd?auto=format&fit=crop&w=800" alt="Blossom Menezes">
-            </div>
-        </section>
+        <!-- Testimonial will be injected here -->
+        <div id="testimonial-placeholder"></div>
         
         <section class="about">
             <div class="about-content">
@@ -159,20 +166,11 @@
             </div>
         </section>
 
-        <section class="cta-section">
-            <div class="cta-box">
-                <div class="cta-content">
-                    <h2>Ready to make business fun again?</h2>
-                    <p>Get business services tailored to your needs.</p>
-                    <div class="cta-buttons">
-                        <a href="#" class="primary-btn">Get Started</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- CTA will be injected here -->
+        <div id="cta-placeholder"></div>
 
-<!-- Footer will be injected here -->
-<div id="footer-placeholder"></div>
+        <!-- Footer will be injected here -->
+        <div id="footer-placeholder"></div>
 
     </div>
 
