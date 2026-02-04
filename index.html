@@ -14,21 +14,8 @@
 </head>
 <body>
 
-<header>
-        <nav>
-            <div class="logo">SILVER<span>TREE</span></div>
-            <div class="nav-right">
-                <ul>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Case Studies</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-                <div class="nav-buttons">
-                    <a href="#contact" class="primary-btn">Contact Us</a>
-                </div>
-            </div>
-        </nav>
-    </header>
+<!-- Navigation will be injected here -->
+<div id="nav-placeholder"></div>
 
     <div class="container">
         <section class="hero">
@@ -72,31 +59,54 @@
             </div>
         </section>
 
-        
-        
-        <section class="features">
-            <h2>Our Services</h2>
-            <p>Comprehensive business solutions designed to help you scale and succeed</p>
-            <a href="#">View our process <i class="fas fa-arrow-right"></i></a>
-            <div class="feature-card">
-                <img src="./assets/images/biz-consulting.jpg" alt="Strategy">
-                <h3>Business Consulting</h3>
-                <p>Targeted campaigns built for growth.</p>
-            </div>
-            <div class="feature-card">
-                <img src="./assets/images/va.jpg" alt="Management">
-                <h3>Virtual Assistance</h3>
-                <p>Scale your media buying effectively.</p>
-            </div>
-            <div class="feature-card">
-                <img src="./assets/images/recruit.jpg" alt="Analytics">
-                <h3>Staff Recruitment</h3>
-                <p>Data-driven insights at your fingertips.</p>
-            </div>
-            <div class="feature-card">
-                <img src="./assets/images/workshops.jpg" alt="Support">
-                <h3>Workshop Hostings</h3>
-                <p>We work as an extension of your team.</p>
+        <section class="services-section">
+            <div class="services-container">
+                <h2 class="services-title">Let's work together!</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-image-wrapper">
+                            <img src="./assets/images/biz-consulting.jpg" alt="Business Consulting" class="service-image">
+                        </div>
+                        <div class="service-title-box">
+                            <h3>Business Consulting</h3>
+                        </div>
+                        <p class="service-description">Targeted campaigns built for growth. Strategic solutions to scale your business effectively.</p>
+                        <button class="secondary-btn">Learn More</button>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-image-wrapper">
+                            <img src="./assets/images/va.jpg" alt="Virtual Assistance" class="service-image">
+                        </div>
+                        <div class="service-title-box">
+                            <h3>Virtual Assistance</h3>
+                        </div>
+                        <p class="service-description">Scale your media buying effectively. Professional support for your daily operations.</p>
+                        <button class="secondary-btn">Learn More</button>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-image-wrapper">
+                            <img src="./assets/images/recruit.png" alt="Staff Recruitment" class="service-image">
+                        </div>
+                        <div class="service-title-box">
+                            <h3>Staff Recruitment</h3>
+                        </div>
+                        <p class="service-description">Data-driven insights at your fingertips. Find the perfect talent for your team.</p>
+                        <button class="secondary-btn">Learn More</button>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-image-wrapper">
+                            <img src="./assets/images/workshops.jpg" alt="Workshop Hostings" class="service-image">
+                        </div>
+                        <div class="service-title-box">
+                            <h3>Workshop Hostings</h3>
+                        </div>
+                        <p class="service-description">We work as an extension of your team. Expert-led training and development sessions.</p>
+                        <button class="secondary-btn">Learn More</button>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -161,55 +171,12 @@
             </div>
         </section>
 
-        <footer class="site-footer">
-            <div class="footer-container">
-                <div class="footer-main">
-                    <div class="footer-left">
-                        <div class="footer-logo">
-                            <i class="fa-solid fa-shapes"></i>
-                            <div class="logo">SILVER<span>TREE</span></div>
-                        </div>
-                        <div class="footer-nav">
-                            <a href="#">Services</a>
-                            <a href="#">Case Study</a>
-                            <a href="#">About Us</a>
-                            <a href="#">Contact</a>
-                        </div>
-                    </div>
+<!-- Footer will be injected here -->
+<div id="footer-placeholder"></div>
 
-                    <div class="footer-right">
-                        <h4 class="newsletter-title">Join our newsletter</h4>
-                        <div class="newsletter-input-group">
-                            <input type="email" placeholder="Enter your email">
-                            <button class="btn-subscribe">Subscribe</button>
-                        </div>
-                        <div class="newsletter-consent">
-                            <label class="consent-label">
-                                <input type="checkbox" name="consent">
-                                <span>I agree to receive marketing emails and accept the privacy policy.</span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="footer-divider"></div>
-
-                <div class="footer-bottom">
-                    <div class="footer-bottom-left">
-                        <div class="social-icons">
-                            <a href="http://linkedin.com/in/ruth-aldana-ricketts-ma-business-owner-144693374"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="#"><img src="./assets/images/alignable-social-icon.svg" alt="Alignable" style="width: 18px; height: 18px; vertical-align: middle; color: #664875"></a>
-                        </div>
-                        <span class="copyright">© 2026 Silver Tree. All Rights Reserved.</span>
-                    </div>
-                    <div class="legal-links">
-                        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
     </div>
 
+    <script src="./assets/js/components.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 </html>
