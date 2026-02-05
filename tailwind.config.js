@@ -10,16 +10,17 @@ module.exports = {
     extend: {
       colors: {
         'deep-plum': '#664875',
-        'copper': '#CC9466',
+        'copper': '#d9ac88',
         'powder-blue': '#bdd4e0',
         'blue': '#4e70af',
         'warm-grey': '#cabcb0',
         'light-text': '#f7f5f3',
-        'dark-text': '#160F1A'
+        'dark-text': '#160F1A',
+        'plum': '#9b7eac',
       },
       fontFamily: {
-        'serif': ['DM Serif Display', 'serif'],
-        'sans': ['Poppins', 'sans-serif']
+        'dm-serif-display': ['"DM Serif Display"', 'serif'],
+        'poppins': ['"Poppins"', 'sans-serif']
       }
     },
   },
