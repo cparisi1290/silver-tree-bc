@@ -1,70 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Silver Tree | Our Services</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    
+
     <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'deep-plum': '#4a3c5c',
-              'copper': '#b87333',
-              'light-text': '#ffffff',
-              'dark-text': '#333333'
-            },
-            fontFamily: {
-              'serif': ['DM Serif Display', 'serif'],
-              'sans': ['Montserrat', 'sans-serif']
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deep-plum': '#4a3c5c',
+                        'copper': '#b87333',
+                        'light-text': '#ffffff',
+                        'dark-text': '#333333'
+                    },
+                    fontFamily: {
+                        'serif': ['DM Serif Display', 'serif'],
+                        'sans': ['Montserrat', 'sans-serif']
+                    }
+                }
             }
-          }
         }
-      }
     </script>
-    
+
     <link rel="stylesheet" href="./assets/css/main.css">
 </head>
+
 <body>
 
-    
+
     <!-- Navigation will be injected here -->
     <div id="nav-placeholder"></div>
     <div class="container">
 
         <!-- Services Hero Section -->
-        <section class="min-h-[800px] bg-cover bg-center bg-no-repeat flex items-center justify-center relative" 
-                 style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80'); margin-left: calc(-50vw + 50%); width: 100vw;">
+        <section class="min-h-[800px] bg-cover bg-center bg-no-repeat flex items-center justify-center relative"
+            style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80'); margin-left: calc(-50vw + 50%); width: 100vw;">
             <div class="bg-light-text text-deep-plum p-[60px] max-w-[700px] rounded-[20px] -ml-[850px]">
                 <h1 class="mb-5 leading-[1.1]">Hire Experts. Get Work Done. Scale Faster.</h1>
-                <p class="mb-[30px]">Silver Tree provides the stability and strategy small business owners need to move past the "stuck" phase and into growth.</p>
-                <a href="#" class="inline-block bg-deep-plum text-light-text px-6 py-3 rounded-[20px] font-semibold hover:bg-opacity-90 transition-colors">Get Started Now →</a>
+                <p class="mb-[30px]">Silver Tree provides the stability and strategy small business owners need to move
+                    past the "stuck" phase and into growth.</p>
+                <a href="#"
+                    class="inline-block bg-deep-plum text-light-text px-6 py-3 rounded-[20px] font-semibold hover:bg-opacity-90 transition-colors">Get
+                    Started Now →</a>
             </div>
         </section>
 
         <section class="py-[100px]">
             <div class="grid grid-cols-2 gap-[80px] items-center">
                 <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" class="w-full rounded-[4px]">                
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
+                        class="w-full rounded-[4px]">
                 </div>
                 <div>
                     <p class="text-copper font-bold text-[0.8rem] uppercase tracking-[2px]">Silver Tree Edge</p>
                     <h2 class="text-[3.5rem] leading-[1.1] my-4">What Makes Us Different?</h2>
-                    <p>We combine a Master's-level understanding of psychology with a decade of operational expertise. We align your business with your natural rhythms.</p>
+                    <p>We combine a Master's-level understanding of psychology with a decade of operational expertise.
+                        We align your business with your natural rhythms.</p>
                     <div class="grid grid-cols-2 gap-5 mt-[30px]">
-                        <div><h4 class="font-montserrat">Psychology-Backed</h4><p class="text-[0.8rem] text-[#777]">Decisions based on human behavior.</p></div>
-                        <div><h4 class="font-montserrat">Process Oriented</h4><p class="text-[0.8rem] text-[#777]">Reliable foundations for flight.</p></div>
+                        <div>
+                            <h4 class="font-montserrat">Psychology-Backed</h4>
+                            <p class="text-[0.8rem] text-[#777]">Decisions based on human behavior.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-montserrat">Process Oriented</h4>
+                            <p class="text-[0.8rem] text-[#777]">Reliable foundations for flight.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -76,127 +91,135 @@
             <div x-data="{ activeTab: 'consulting' }" class="tabs-container">
                 <!-- Tab Navigation -->
                 <div class="flex justify-center py-5 border-t border-b border-[#e7e7e7]">
-                    <button 
-                        @click="activeTab = 'consulting'" 
+                    <button @click="activeTab = 'consulting'"
                         :class="{'text-deep-plum border-b-[3px] border-deep-plum': activeTab === 'consulting'}"
-                        class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-poppins font-bold text-[#aaa] uppercase text-[0.8rem] hover:text-deep-plum transition-colors"
-                    >
+                        class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-poppins font-bold text-[#aaa] uppercase text-[0.8rem] hover:text-deep-plum transition-colors">
                         Consulting
                     </button>
-                    <button 
-                        @click="activeTab = 'recruiting'" 
+                    <button @click="activeTab = 'recruiting'"
                         :class="{'text-deep-plum border-b-[3px] border-deep-plum': activeTab === 'recruiting'}"
-                        class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-poppins font-bold text-[#aaa] uppercase text-[0.8rem] hover:text-deep-plum transition-colors"
-                    >
+                        class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-poppins font-bold text-[#aaa] uppercase text-[0.8rem] hover:text-deep-plum transition-colors">
                         Recruiting
                     </button>
-                    <button 
-                        @click="activeTab = 'va'" 
+                    <button @click="activeTab = 'va'"
                         :class="{'text-deep-plum border-b-[3px] border-deep-plum': activeTab === 'va'}"
-                        class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-poppins font-bold text-[#aaa] uppercase text-[0.8rem] hover:text-deep-plum transition-colors"
-                    >
+                        class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-poppins font-bold text-[#aaa] uppercase text-[0.8rem] hover:text-deep-plum transition-colors">
                         VA Support
                     </button>
-                    <button 
-                        @click="activeTab = 'workshops'" 
+                    <button @click="activeTab = 'workshops'"
                         :class="{'text-deep-plum border-b-[3px] border-deep-plum': activeTab === 'workshops'}"
-                        class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-poppins font-bold text-[#aaa] uppercase text-[0.8rem] hover:text-deep-plum transition-colors"
-                    >
+                        class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-poppins font-bold text-[#aaa] uppercase text-[0.8rem] hover:text-deep-plum transition-colors">
                         Workshops
                     </button>
                 </div>
 
-            <!-- Tab Panels -->
-            <div class="tabs-panels">
-                <!-- Consulting Panel -->
-                <div x-show="activeTab === 'consulting'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-x-4" x-transition:enter-end="opacity-100 transform translate-x-0" class="tabs-panel">
-                    <div class="services-service-flex">
-                        <div class="tabs-img">
-                            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80">
-                            <div class="services-prog-circle">
-                                <span class="prog-circle-number">92%</span>
-                                <span class="prog-circle-label">Focus</span>
+                <!-- Tab Panels -->
+                <div class="tabs-panels">
+                    <!-- Consulting Panel -->
+                    <div x-show="activeTab === 'consulting'" x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 transform translate-x-4"
+                        x-transition:enter-end="opacity-100 transform translate-x-0" class="tabs-panel">
+                        <div class="services-service-flex">
+                            <div class="tabs-img">
+                                <img
+                                    src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80">
+                                <div class="services-prog-circle">
+                                    <span class="prog-circle-number">92%</span>
+                                    <span class="prog-circle-label">Focus</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="tabs-text">
-                            <h2>Business Consulting</h2>
-                            <p>Break through the plateau. We use psychology-backed time management and solution-focused strategies to get you back on track.</p>
-                            <ul class="tabs-check-list">
-                                <li>Operational Roadmaps</li>
-                                <li>Executive Efficiency Audits</li>
-                                <li>Growth Strategy Design</li>
-                            </ul>
+                            <div class="tabs-text">
+                                <h2>Business Consulting</h2>
+                                <p>Break through the plateau. We use psychology-backed time management and
+                                    solution-focused strategies to get you back on track.</p>
+                                <ul class="tabs-check-list">
+                                    <li>Operational Roadmaps</li>
+                                    <li>Executive Efficiency Audits</li>
+                                    <li>Growth Strategy Design</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Recruiting Panel -->
-                <div x-show="activeTab === 'recruiting'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-x-4" x-transition:enter-end="opacity-100 transform translate-x-0" class="tabs-panel">
-                    <div class="services-service-flex services-flex-reverse">
-                        <div class="tabs-img">
-                            <img src="https://images.unsplash.com/photo-1521791136064-7986c2959213?auto=format&fit=crop&w=800&q=80">
-                            <div class="services-prog-circle">
-                                <span class="prog-circle-number copper">100%</span>
-                                <span class="prog-circle-label">Match</span>
+                    <!-- Recruiting Panel -->
+                    <div x-show="activeTab === 'recruiting'" x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 transform translate-x-4"
+                        x-transition:enter-end="opacity-100 transform translate-x-0" class="tabs-panel">
+                        <div class="services-service-flex services-flex-reverse">
+                            <div class="tabs-img">
+                                <img
+                                    src="https://images.unsplash.com/photo-1521791136064-7986c2959213?auto=format&fit=crop&w=800&q=80">
+                                <div class="services-prog-circle">
+                                    <span class="prog-circle-number copper">100%</span>
+                                    <span class="prog-circle-label">Match</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="tabs-text">
-                            <h2>Staff Recruiting</h2>
-                            <p>Stop the revolving door. Our unique 4-step interactive interview process ensures you hire the right fit the first time.</p>
-                            <ul class="tabs-check-list">
-                                <li>Values-Based Hiring</li>
-                                <li>Interactive Interview Vetting</li>
-                                <li>Team-Fit Integration</li>
-                            </ul>
+                            <div class="tabs-text">
+                                <h2>Staff Recruiting</h2>
+                                <p>Stop the revolving door. Our unique 4-step interactive interview process ensures you
+                                    hire the right fit the first time.</p>
+                                <ul class="tabs-check-list">
+                                    <li>Values-Based Hiring</li>
+                                    <li>Interactive Interview Vetting</li>
+                                    <li>Team-Fit Integration</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- VA Support Panel -->
-                <div x-show="activeTab === 'va'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-x-4" x-transition:enter-end="opacity-100 transform translate-x-0" class="tabs-panel">
-                    <div class="services-service-flex">
-                        <div class="tabs-img">
-                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80">
-                            <div class="services-prog-circle">
-                                <span class="prog-circle-number">15+</span>
-                                <span class="prog-circle-label">Weekly Hrs</span>
+                    <!-- VA Support Panel -->
+                    <div x-show="activeTab === 'va'" x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 transform translate-x-4"
+                        x-transition:enter-end="opacity-100 transform translate-x-0" class="tabs-panel">
+                        <div class="services-service-flex">
+                            <div class="tabs-img">
+                                <img
+                                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80">
+                                <div class="services-prog-circle">
+                                    <span class="prog-circle-number">15+</span>
+                                    <span class="prog-circle-label">Weekly Hrs</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="tabs-text">
-                            <h2>Virtual Support</h2>
-                            <p>Offload the busy work. From data entry to executive scheduling, we handle the details so you can lead your business.</p>
-                            <ul class="tabs-check-list">
-                                <li>Inbox & Calendar Management</li>
-                                <li>Data Organization</li>
-                                <li>Client Coordination</li>
-                            </ul>
+                            <div class="tabs-text">
+                                <h2>Virtual Support</h2>
+                                <p>Offload the busy work. From data entry to executive scheduling, we handle the details
+                                    so you can lead your business.</p>
+                                <ul class="tabs-check-list">
+                                    <li>Inbox & Calendar Management</li>
+                                    <li>Data Organization</li>
+                                    <li>Client Coordination</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Workshops Panel -->
-                <div x-show="activeTab === 'workshops'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform translate-x-4" x-transition:enter-end="opacity-100 transform translate-x-0" class="tabs-panel">
-                    <div class="services-service-flex services-flex-reverse">
-                        <div class="tabs-img">
-                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80">
-                            <div class="services-prog-circle">
-                                <span class="prog-circle-number copper">4.9/5</span>
-                                <span class="prog-circle-label">Rating</span>
+                    <!-- Workshops Panel -->
+                    <div x-show="activeTab === 'workshops'" x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 transform translate-x-4"
+                        x-transition:enter-end="opacity-100 transform translate-x-0" class="tabs-panel">
+                        <div class="services-service-flex services-flex-reverse">
+                            <div class="tabs-img">
+                                <img
+                                    src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80">
+                                <div class="services-prog-circle">
+                                    <span class="prog-circle-number copper">4.9/5</span>
+                                    <span class="prog-circle-label">Rating</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="tabs-text">
-                            <h2>Workshops</h2>
-                            <p>Custom-built training for your team, delivered in-person or virtually, to solve your specific bottlenecks and scale skillsets.</p>
-                            <ul class="tabs-check-list">
-                                <li>Workflow Optimization</li>
-                                <li>Communication Training</li>
-                                <li>Custom SOP Development</li>
-                            </ul>
+                            <div class="tabs-text">
+                                <h2>Workshops</h2>
+                                <p>Custom-built training for your team, delivered in-person or virtually, to solve your
+                                    specific bottlenecks and scale skillsets.</p>
+                                <ul class="tabs-check-list">
+                                    <li>Workflow Optimization</li>
+                                    <li>Communication Training</li>
+                                    <li>Custom SOP Development</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
 
         <section class="services-timeline-section container">
@@ -205,33 +228,51 @@
                 <div class="services-timeline-grid">
                     <div class="services-step-box services-s-1">
                         <div class="services-balloon"><span>01</span></div>
-                        <div class="services-step-desc"><h4>Discovery</h4><p>We analyze your current rhythms.</p></div>
+                        <div class="services-step-desc">
+                            <h4>Discovery</h4>
+                            <p>We analyze your current rhythms.</p>
+                        </div>
                         <div class="services-node"></div>
                     </div>
                     <div class="services-step-box services-s-2">
                         <div class="services-node"></div>
                         <div class="services-balloon balloon-offset"><span>02</span></div>
-                        <div class="services-step-desc"><h4>Audit</h4><p>Finding the efficiency leaks.</p></div>
+                        <div class="services-step-desc">
+                            <h4>Audit</h4>
+                            <p>Finding the efficiency leaks.</p>
+                        </div>
                     </div>
                     <div class="services-step-box services-s-3">
                         <div class="services-balloon"><span>03</span></div>
-                        <div class="services-step-desc"><h4>Strategy</h4><p>Architecting the custom plan.</p></div>
+                        <div class="services-step-desc">
+                            <h4>Strategy</h4>
+                            <p>Architecting the custom plan.</p>
+                        </div>
                         <div class="services-node"></div>
                     </div>
                     <div class="services-step-box services-s-4">
                         <div class="services-node"></div>
                         <div class="services-balloon balloon-offset"><span>04</span></div>
-                        <div class="services-step-desc"><h4>Alignment</h4><p>Syncing the team and vision.</p></div>
+                        <div class="services-step-desc">
+                            <h4>Alignment</h4>
+                            <p>Syncing the team and vision.</p>
+                        </div>
                     </div>
                     <div class="services-step-box services-s-5">
                         <div class="services-balloon"><span>05</span></div>
-                        <div class="services-step-desc"><h4>Execution</h4><p>Implementation begins now.</p></div>
+                        <div class="services-step-desc">
+                            <h4>Execution</h4>
+                            <p>Implementation begins now.</p>
+                        </div>
                         <div class="services-node"></div>
                     </div>
                     <div class="services-step-box services-s-6">
                         <div class="services-node"></div>
                         <div class="services-balloon balloon-offset"><span>06</span></div>
-                        <div class="services-step-desc"><h4>Growth</h4><p>Scalable results achieved.</p></div>
+                        <div class="services-step-desc">
+                            <h4>Growth</h4>
+                            <p>Scalable results achieved.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -240,7 +281,7 @@
     </div>
 
     <!-- Testimonial will be injected here -->
-        <div id="testimonial-placeholder"></div>
+    <div id="testimonial-placeholder"></div>
 
     <!-- CTA will be injected here -->
     <div id="cta-placeholder"></div>
@@ -251,4 +292,5 @@
     <script src="./assets/js/components.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
+
 </html>
