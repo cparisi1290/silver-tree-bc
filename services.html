@@ -28,6 +28,7 @@
                         'powder-blue': '#bdd4e0',
                         'blue': '#4e70af',
                         'warm-grey': '#cabcb0',
+                        'dark-grey': '#4a4a4ab7',
                         'light-text': '#f7f5f3',
                         'dark-text': '#160F1A',
                         'plum': '#9b7eac',
@@ -52,7 +53,7 @@
     <div class="container">
 
         <!-- Services Hero Section -->
-        <section class="min-h-[800px] bg-cover bg-center bg-no-repeat flex items-center justify-center relative"
+        <section class="min-h-[800px] bg-cover bg-center bg-no-repeat flex items-center justify-center relative "
             style="background-image: url('./assets/images/silver-tree-right.png'); margin-left: calc(-50vw + 50%); width: 100vw;">
             <div class="absolute inset-0"></div>
             <div class="container mx-auto px-4 relative z-10 lg:-translate-x-16">
@@ -61,7 +62,8 @@
                     class="bg-light-text mx-auto px-10 md:px-[80px] h-[450px] w-full max-w-[1200px] rounded-[24px] shadow-2xl flex items-center relative">
 
                     <div class="w-full lg:w-[65%] z-10 text-left">
-                        <h1 class="text-4xl md:text-6xl text-deep-plum mb-6 leading-[1.1] tracking-tight text-serif">
+                        <h1
+                            class="text-4xl md:text-6xl text-deep-plum mb-6 leading-[1.1] tracking-tight text-serif font-bold">
                             Hire Experts. Get Work Done. Scale Faster.
                         </h1>
                         <p class="text-lg md:text-2xl text-dark-text mb-10 font-light leading-relaxed max-w-[550px]">
@@ -88,21 +90,28 @@
             <div class="grid grid-cols-2 gap-[80px] items-center">
                 <div class="relative">
                     <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
-                        class="w-full rounded-2xl">
+                        class="w-full rounded-2xl shadow-xl">
                 </div>
                 <div>
                     <!-- <p class="text-copper font-bold text-[0.8rem] uppercase tracking-[2px]">Silver Tree Edge</p> -->
-                    <h2 class="text-[3.5rem] leading-[1.1] my-4">What Makes Us Different?</h2>
+                    <h2 class="text-5xl text-dark-text leading-[1.1] my-4">What Makes Us Different?</h2>
                     <p>We combine a Master's-level understanding of psychology with a decade of operational expertise.
                         We align your business with your natural rhythms.</p>
-                    <div class="grid grid-cols-2 gap-5 mt-[30px]">
-                        <div>
-                            <h4 class="font-montserrat">Psychology-Backed</h4>
-                            <p class="text-[0.8rem] text-[#777]">Decisions based on human behavior.</p>
+                    <div class="grid grid-cols-2 gap-5 mt-[150px]">
+                        <div
+                            class="text-lg font-sans backdrop-blur-sm bg-white/30 bg-opacity-80 p-6 rounded-xl shadow-xl border border-white/20">
+                            <h4>
+                                Psychology-Backed</h4>
+                            <p class="text-sm text-dark-grey ">
+                                Decisions based on human behavior.</p>
                         </div>
-                        <div>
-                            <h4 class="font-montserrat">Process Oriented</h4>
-                            <p class="text-[0.8rem] text-[#777]">Reliable foundations for flight.</p>
+                        <div
+                            class="text-lg font-sans backdrop-blur-sm bg-white/30 bg-opacity-80 p-6 rounded-xl shadow-xl border border-white/20">
+                            <h4>
+                                Process Oriented</h4>
+                            <p class="text-sm text-dark-grey">
+                                Reliable foundations for flight. Reliable foundations for flight. Reliable foundations
+                                for flight. </p>
                         </div>
                     </div>
                 </div>
@@ -111,7 +120,7 @@
 
         <!-- Tabbed Services Section with Alpine.js -->
         <div class="container">
-            <h2 class="section-title">Our Services</h2>
+            <h2 class="section-title text-5xl text-dark-text">Our Services</h2>
             <p class="text-center text-gray-600 mb-16 max-w-4xl mx-auto text-lg">
                 We offer comprehensive business solutions designed to help you overcome challenges and achieve
                 sustainable growth. From strategic consulting to expert staffing, our services are tailored to your
@@ -119,25 +128,25 @@
             </p>
             <div x-data="{ activeTab: 'consulting' }" class="tabs-container">
                 <!-- Tab Navigation -->
-                <div class="flex justify-center py-5 border-t border-b border-[#e7e7e7]">
+                <div class="flex justify-center py-5  border-b border-[#e7e7e7] shadow-lg">
                     <button @click="activeTab = 'consulting'"
-                        :class="{'text-deep-plum border-b-[3px] border-deep-plum': activeTab === 'consulting'}"
-                        class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-poppins font-bold text-[#aaa] uppercase text-[0.8rem] hover:text-deep-plum transition-colors">
+                        :class="{'text-copper border-b-[3px] border-copper': activeTab === 'consulting'}"
+                        class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-sans font-bold text-[#aaa] uppercase text-xl hover:text-copper transition-colors">
                         Consulting
                     </button>
                     <button @click="activeTab = 'va'"
-                        :class="{'text-deep-plum border-b-[3px] border-deep-plum': activeTab === 'va'}"
-                        class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-poppins font-bold text-[#aaa] uppercase text-[0.8rem] hover:text-deep-plum transition-colors">
+                        :class="{'text-copper border-b-[3px] border-copper': activeTab === 'va'}"
+                        class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-sans font-bold text-[#aaa] uppercase text-xl hover:text-copper transition-colors">
                         VA Support
                     </button>
                     <button @click="activeTab = 'recruiting'"
-                        :class="{'text-deep-plum border-b-[3px] border-deep-plum': activeTab === 'recruiting'}"
-                        class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-poppins font-bold text-[#aaa] uppercase text-[0.8rem] hover:text-deep-plum transition-colors">
+                        :class="{'text-copper border-b-[3px] border-copper': activeTab === 'recruiting'}"
+                        class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-sans font-bold text-[#aaa] uppercase text-xl hover:text-copper transition-colors">
                         Recruiting
                     </button>
                     <button @click="activeTab = 'workshops'"
-                        :class="{'text-deep-plum border-b-[3px] border-deep-plum': activeTab === 'workshops'}"
-                        class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-poppins font-bold text-[#aaa] uppercase text-[0.8rem] hover:text-deep-plum transition-colors">
+                        :class="{'text-copper border-b-[3px] border-copper': activeTab === 'workshops'}"
+                        class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-sans font-bold text-[#aaa] uppercase text-xl hover:text-copper transition-colors">
                         Workshops
                     </button>
                 </div>
@@ -150,10 +159,10 @@
                         x-transition:enter-end="opacity-100 transform translate-x-0" class="tabs-panel">
                         <div class="services-service-flex">
                             <div class="tabs-img">
-                                <img src="./assets/images/biz-consulting.jpg">
+                                <img src="./assets/images/biz-consulting.jpg" class="shadow-2xl rounded-xl">
                             </div>
                             <div class="tabs-text">
-                                <h2>Business Consulting</h2>
+                                <h2 class="text-2xl text-dark-text">Business Consulting</h2>
                                 <p>Break through the plateau. We use psychology-backed time management and
                                     solution-focused strategies to get you back on track.</p>
                                 <ul class="tabs-check-list">
@@ -172,13 +181,10 @@
                         x-transition:enter-end="opacity-100 transform translate-x-0" class="tabs-panel">
                         <div class="services-service-flex services-flex-reverse">
                             <div class="tabs-img">
-                                <img src="./assets/images/va.jpg"
-                                    <!-- "https://images.unsplash.com/photo-1521791136064-7986c2959213?auto=format&fit=crop&w=800&q=80"
-                                    -->
-                                >
+                                <img src="./assets/images/va.jpg" class="shadow-2xl rounded-xl">
                             </div>
                             <div class="tabs-text">
-                                <h2>Virtual Support</h2>
+                                <h2 class="text-2xl text-dark-text">Virtual Support</h2>
                                 <p>Stop the revolving door. Our unique 4-step interactive interview process ensures you
                                     hire the right fit the first time.</p>
                                 <ul class="tabs-check-list">
@@ -196,11 +202,10 @@
                         x-transition:enter-end="opacity-100 transform translate-x-0" class="tabs-panel">
                         <div class="services-service-flex">
                             <div class="tabs-img">
-                                <img
-                                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80">
+                                <img src="./assets/images/recruit.png" class="shadow-2xl rounded-xl">
                             </div>
                             <div class="tabs-text">
-                                <h2>Staff Recruitment</h2>
+                                <h2 class="text-2xl text-dark-text">Staff Recruitment</h2>
                                 <p>Offload the busy work. From data entry to executive scheduling, we handle the details
                                     so you can lead your business.</p>
                                 <ul class="tabs-check-list">
@@ -218,12 +223,11 @@
                         x-transition:enter-end="opacity-100 transform translate-x-0" class="tabs-panel">
                         <div class="services-service-flex services-flex-reverse">
                             <div class="tabs-img">
-                                <img
-                                    src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80">
+                                <img src="./assets/images/workshops.jpg" class="shadow-2xl rounded-xl">
 
                             </div>
                             <div class="tabs-text">
-                                <h2>Workshops</h2>
+                                <h2 class="text-2xl text-dark-text">Workshops</h2>
                                 <p>Custom-built training for your team, delivered in-person or virtually, to solve your
                                     specific bottlenecks and scale skillsets.</p>
                                 <ul class="tabs-check-list">
