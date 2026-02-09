@@ -45,12 +45,12 @@
 </head>
 
 <body>
+    <!-- Navigation will be injected here -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Hero Section -->
 
     <div class="container">
-        <!-- Navigation will be injected here -->
-        <div id="nav-placeholder"></div>
-
-        <!-- Hero Section -->
         <section class="relative py-20 lg:py-32 overflow-hidden bg-light-text"
             style="background-image: linear-gradient(to left, #f7f5f3 0%, #f7f5f3 50%, rgba(247, 245, 243, 1) 60%, rgba(247, 245, 243, 0.3) 85%, transparent 100%), url('./assets/images/silver-tree-left.png'); background-size: 100% 100%, 40% 100%; background-position: right center, left center; background-repeat: no-repeat; width: 100vw; margin-left: calc(-50vw + 50%);">
 
@@ -113,66 +113,75 @@
         </section>
 
         <!-- Core Values Section -->
-        <section class="py-24 bg-light-text overflow-hidden">
+        <section class="py-24 overflow-hidden"
+            style="background: var(--powder-blue); margin-left: calc(-50vw + 50%); width: 100vw;">
             <div class="container mx-auto px-6">
-                <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="bg-white p-8 lg:p-12 rounded-2xl shadow-xl w-full">
+                    <div class="flex flex-col lg:flex-row items-center gap-16">
+                        <div class="w-full lg:w-1/2" x-data="{ active: 'innovation' }">
+                            <h2 class="text-serif text-5xl text-dark-text mb-12">Core values</h2>
 
-                    <div class="w-full lg:w-1/2" x-data="{ active: 'innovation' }">
-                        <h2 class="text-serif text-5xl text-dark-text mb-12">Core values</h2>
+                            <div class="space-y-10 relative">
+                                <div class="absolute left-0 top-0 w-1 h-full bg-powder-blue rounded-full">
+                                    <div class="bg-copper w-full transition-all duration-500 rounded-full"
+                                        :style="active === 'innovation' ? 'height: 25%' : active === 'reliable' ? 'height: 50%' : active === 'customer' ? 'height: 75%' : 'height: 100%'">
+                                    </div>
+                                </div>
 
-                        <div class="space-y-10 relative">
-                            <div class="absolute left-0 top-0 w-1 h-full bg-powder-blue rounded-full">
-                                <div class="bg-copper w-full transition-all duration-500 rounded-full"
-                                    :style="active === 'innovation' ? 'height: 25%' : active === 'reliable' ? 'height: 50%' : active === 'customer' ? 'height: 75%' : 'height: 100%'">
+                                <div class="pl-8 cursor-pointer group" @mouseenter="active = 'innovation'">
+                                    <h4 class="font-bold text-xl mb-2 transition-colors"
+                                        :class="active === 'innovation' ? 'text-copper' : 'text-dark-text'">Innovation
+                                        first:</h4>
+                                    <p class="text-dark-grey">We set trends by pushing boundaries in predictive
+                                        technology.
+                                    </p>
+                                </div>
+
+                                <div class="pl-8 cursor-pointer group" @mouseenter="active = 'reliable'">
+                                    <h4 class="font-bold text-xl mb-2 transition-colors"
+                                        :class="active === 'reliable' ? 'text-copper' : 'text-dark-text'">Always
+                                        reliable:
+                                    </h4>
+                                    <p class="text-dark-grey">Trust is earned through consistency and platform
+                                        performance.
+                                    </p>
+                                </div>
+
+                                <div class="pl-8 cursor-pointer group" @mouseenter="active = 'customer'">
+                                    <h4 class="font-bold text-xl mb-2 transition-colors"
+                                        :class="active === 'customer' ? 'text-copper' : 'text-dark-text'">Customer
+                                        centric:
+                                    </h4>
+                                    <p class="text-dark-grey">Every improvement begins with listening to our community.
+                                    </p>
                                 </div>
                             </div>
-
-                            <div class="pl-8 cursor-pointer group" @mouseenter="active = 'innovation'">
-                                <h4 class="font-bold text-xl mb-2 transition-colors"
-                                    :class="active === 'innovation' ? 'text-copper' : 'text-dark-text'">Innovation
-                                    first:</h4>
-                                <p class="text-dark-grey">We set trends by pushing boundaries in predictive technology.
-                                </p>
-                            </div>
-
-                            <div class="pl-8 cursor-pointer group" @mouseenter="active = 'reliable'">
-                                <h4 class="font-bold text-xl mb-2 transition-colors"
-                                    :class="active === 'reliable' ? 'text-copper' : 'text-dark-text'">Always reliable:
-                                </h4>
-                                <p class="text-dark-grey">Trust is earned through consistency and platform performance.
-                                </p>
-                            </div>
-
-                            <div class="pl-8 cursor-pointer group" @mouseenter="active = 'customer'">
-                                <h4 class="font-bold text-xl mb-2 transition-colors"
-                                    :class="active === 'customer' ? 'text-copper' : 'text-dark-text'">Customer centric:
-                                </h4>
-                                <p class="text-dark-grey">Every improvement begins with listening to our community.</p>
-                            </div>
                         </div>
-                    </div>
 
-                    <div class="w-full lg:w-1/2 relative">
-                        <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
-                                class="w-full h-[500px] object-cover">
-                        </div>
-                        <div class="absolute -top-6 -right-6 w-full h-full border-4 border-copper/20 rounded-2xl -z-10">
+                        <div class="w-full lg:w-1/2 relative">
+                            <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
+                                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+                                    class="w-full h-[500px] object-cover">
+                            </div>
+                            <div
+                                class="absolute -top-6 -right-6 w-full h-full border-4 border-copper/20 rounded-2xl -z-10">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Testimonial will be injected here -->
-        <div id="testimonial-placeholder"></div>
-
-        <!-- CTA will be injected here -->
-        <div id="cta-placeholder"></div>
-
-        <!-- Footer will be injected here -->
-        <div id="footer-placeholder"></div>
     </div>
+    </section>
+
+    <!-- Testimonial will be injected here -->
+    <div id="testimonial-placeholder"></div>
+
+    <!-- CTA will be injected here -->
+    <div id="cta-placeholder"></div>
+    </div>
+
+    <!-- Footer will be injected here -->
+    <div id="footer-placeholder"></div>
 
     <script src="./assets/js/components.js"></script>
     <script src="./assets/js/main.js"></script>
