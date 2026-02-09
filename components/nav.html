@@ -1,24 +1,76 @@
-<header class="bg-light-text shadow-xl border-b border-gray-200 drop-shadow-xl"
+<header class="bg-light-text shadow-2xl border-b border-gray-200 drop-shadow-2xl"
     style="z-index: 50; position: relative;">
     <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="index.html" class="text-3xl font-bold text-deep-plum font-poppins">
+        <a href="index.html" class="text-3xl font-bold text-deep-plum font-poppins logo">
             <div>SILVER<span class="text-plum font-light">TREE</span></div>
             <div class="text-base font-normal text-dark-text tracking-widest text-center">Business Consulting</div>
         </a>
-        <div class="flex items-center gap-8">
+        <div class="flex items-center gap-8 nav-right">
             <ul class="hidden md:flex gap-6 font-medium font-poppins tracking-wide">
                 <li><a href="services.html"
                         class="text-dark-text hover:text-copper transition-colors font-medium">Services</a></li>
-                <li><a href="#" class="text-dark-text hover:text-copper transition-colors font-medium">Case
+                <li><a href="case-studies.html"
+                        class="text-dark-text hover:text-copper transition-colors font-medium">Case
                         Studies</a>
                 </li>
-                <li><a href="#" class="text-dark-text hover:text-copper transition-colors font-medium">About</a></li>
+                <li><a href="about.html"
+                        class="text-dark-text hover:text-copper transition-colors font-medium">About</a>
+                </li>
             </ul>
             <div class="nav-buttons">
-                <a href="#contact"
-                    class="bg-deep-plum text-light-text px-6 py-2 rounded-[50px] font-medium hover:bg-opacity-90 transition-colors">Contact
+                <a href="contact.html"
+                    class="bg-deep-plum text-light-text px-6 py-2 rounded-[50px] font-medium hover:bg-opacity-90 transition-colors primary-btn">Contact
                     Us</a>
             </div>
         </div>
     </nav>
 </header>
+
+<style>
+    /* Override main.css nav styles for consistency */
+    header nav {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 25px 8% !important;
+    }
+
+    header .logo {
+        font-weight: 800 !important;
+        font-size: 24px !important;
+        color: var(--deep-plum) !important;
+    }
+
+    header .logo span {
+        font-weight: 300 !important;
+        color: var(--plum) !important;
+    }
+
+    header .nav-right {
+        display: flex !important;
+        align-items: center !important;
+        gap: 30px !important;
+    }
+
+    header nav ul {
+        display: flex !important;
+        gap: 30px !important;
+    }
+
+    header nav ul a {
+        color: var(--dark-text) !important;
+        font-size: 16px !important;
+    }
+
+    header .nav-buttons {
+        display: flex !important;
+        align-items: center !important;
+        gap: 20px !important;
+    }
+
+    header .nav-buttons .primary-btn {
+        padding: 8px 20px !important;
+        min-width: auto !important;
+        font-size: 14px !important;
+    }
+</style>
