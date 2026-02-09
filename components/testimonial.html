@@ -3,11 +3,10 @@
     x-init="console.log('Testimonial component initialized')">
     <div class="container mx-auto px-6">
         <div class="max-w-4xl mx-auto text-center">
-            <i class="fas fa-quote-left text-8xl text-copper opacity-30 mb-6"></i>
-
-            <div class="testimonial-content transition-opacity duration-300 mb-12"
+            <div class="testimonial-content transition-opacity duration-300 mb-12 flex items-start gap-6"
                 :class="isTransitioning ? 'opacity-0' : 'opacity-100'">
-                <p class="text-lg md:text-xl lg:text-2xl text-dark-text leading-relaxed italic font-medium"
+                <i class="fas fa-quote-left text-9xl text-copper opacity-30 -mt-16 -mr-20"></i>
+                <p class="text-lg md:text-xl lg:text-2xl text-dark-text leading-relaxed italic font-medium text-left"
                     x-text="currentTestimonial.quote">
                     ""
                 </p>

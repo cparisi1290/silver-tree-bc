@@ -4,8 +4,11 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 items-start">
             <div class="footer-left">
                 <div class="footer-logo mb-6">
-                    <div class="text-4xl font-bold text-deep-plum font-poppins">SILVER<span
-                            class="text-plum font-light">TREE</span></div>
+                    <a href="index.html" class="text-3xl font-bold text-deep-plum font-poppins logo tracking-[0.03em]">
+                        <div>SILVER<span class="text-plum font-light">TREE</span></div>
+                        <div class="text-sm font-normal text-dark-text tracking-[0.1em] text-center -mt-2">Business
+                            Consulting</div>
+                    </a>
                 </div>
                 <div class="footer-nav flex flex-wrap gap-6">
                     <a href="#" class="hover:text-copper transition-colors">Services</a>
@@ -57,3 +60,10 @@
             </div>
         </div>
 </footer>
+
+<style>
+    /* Remove negative margin from footer logo tagline */
+    footer .footer-logo div:last-child {
+        margin-top: 0 !important;
+    }
+</style>
