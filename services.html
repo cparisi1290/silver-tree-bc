@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@300;400;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -23,14 +23,18 @@
             theme: {
                 extend: {
                     colors: {
-                        'deep-plum': '#4a3c5c',
-                        'copper': '#b87333',
-                        'light-text': '#ffffff',
-                        'dark-text': '#333333'
+                        'deep-plum': '#664875',
+                        'copper': '#d9ac88',
+                        'powder-blue': '#bdd4e0',
+                        'blue': '#4e70af',
+                        'warm-grey': '#cabcb0',
+                        'light-text': '#f7f5f3',
+                        'dark-text': '#160F1A',
+                        'plum': '#9b7eac',
                     },
                     fontFamily: {
                         'serif': ['DM Serif Display', 'serif'],
-                        'sans': ['Montserrat', 'sans-serif']
+                        'sans': ['Poppins', 'sans-serif']
                     }
                 }
             }
@@ -49,25 +53,45 @@
 
         <!-- Services Hero Section -->
         <section class="min-h-[800px] bg-cover bg-center bg-no-repeat flex items-center justify-center relative"
-            style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80'); margin-left: calc(-50vw + 50%); width: 100vw;">
-            <div class="bg-light-text text-deep-plum p-[60px] max-w-[700px] rounded-[20px] -ml-[850px]">
-                <h1 class="mb-5 leading-[1.1]">Hire Experts. Get Work Done. Scale Faster.</h1>
-                <p class="mb-[30px]">Silver Tree provides the stability and strategy small business owners need to move
-                    past the "stuck" phase and into growth.</p>
-                <a href="#"
-                    class="inline-block bg-deep-plum text-light-text px-6 py-3 rounded-[20px] font-semibold hover:bg-opacity-90 transition-colors">Get
-                    Started Now →</a>
+            style="background-image: url('./assets/images/silver-tree-right.png'); margin-left: calc(-50vw + 50%); width: 100vw;">
+            <div class="absolute inset-0"></div>
+            <div class="container mx-auto px-4 relative z-10 lg:-translate-x-16">
+
+                <div
+                    class="bg-light-text mx-auto px-10 md:px-[80px] h-[450px] w-full max-w-[1200px] rounded-[24px] shadow-2xl flex items-center relative">
+
+                    <div class="w-full lg:w-[65%] z-10 text-left">
+                        <h1 class="text-4xl md:text-6xl text-deep-plum mb-6 leading-[1.1] tracking-tight text-serif">
+                            Hire Experts. Get Work Done. Scale Faster.
+                        </h1>
+                        <p class="text-lg md:text-2xl text-dark-text mb-10 font-light leading-relaxed max-w-[550px]">
+                            Silver Tree provides the stability and strategy small business
+                            owners need to move past the "stuck" phase and into growth.
+                        </p>
+                        <a href="#"
+                            class="inline-block bg-deep-plum text-light-text px-12 py-4 rounded-full font-semibold hover:scale-105 transition-all shadow-lg">
+                            Get Started Now
+                        </a>
+                    </div>
+
+                    <div
+                        class="hidden lg:block absolute -right-24 top-1/2 -translate-y-1/2 z-20 w-[420px] h-[600px] rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80"
+                            alt="Coffee Chat" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <section class="py-[100px]">
+        <section class="py-[150px]">
             <div class="grid grid-cols-2 gap-[80px] items-center">
                 <div class="relative">
                     <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
-                        class="w-full rounded-[4px]">
+                        class="w-full rounded-2xl">
                 </div>
                 <div>
-                    <p class="text-copper font-bold text-[0.8rem] uppercase tracking-[2px]">Silver Tree Edge</p>
+                    <!-- <p class="text-copper font-bold text-[0.8rem] uppercase tracking-[2px]">Silver Tree Edge</p> -->
                     <h2 class="text-[3.5rem] leading-[1.1] my-4">What Makes Us Different?</h2>
                     <p>We combine a Master's-level understanding of psychology with a decade of operational expertise.
                         We align your business with your natural rhythms.</p>
@@ -88,6 +112,11 @@
         <!-- Tabbed Services Section with Alpine.js -->
         <div class="container">
             <h2 class="section-title">Our Services</h2>
+            <p class="text-center text-gray-600 mb-16 max-w-4xl mx-auto text-lg">
+                We offer comprehensive business solutions designed to help you overcome challenges and achieve
+                sustainable growth. From strategic consulting to expert staffing, our services are tailored to your
+                unique needs.
+            </p>
             <div x-data="{ activeTab: 'consulting' }" class="tabs-container">
                 <!-- Tab Navigation -->
                 <div class="flex justify-center py-5 border-t border-b border-[#e7e7e7]">
@@ -96,15 +125,15 @@
                         class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-poppins font-bold text-[#aaa] uppercase text-[0.8rem] hover:text-deep-plum transition-colors">
                         Consulting
                     </button>
-                    <button @click="activeTab = 'recruiting'"
-                        :class="{'text-deep-plum border-b-[3px] border-deep-plum': activeTab === 'recruiting'}"
-                        class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-poppins font-bold text-[#aaa] uppercase text-[0.8rem] hover:text-deep-plum transition-colors">
-                        Recruiting
-                    </button>
                     <button @click="activeTab = 'va'"
                         :class="{'text-deep-plum border-b-[3px] border-deep-plum': activeTab === 'va'}"
                         class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-poppins font-bold text-[#aaa] uppercase text-[0.8rem] hover:text-deep-plum transition-colors">
                         VA Support
+                    </button>
+                    <button @click="activeTab = 'recruiting'"
+                        :class="{'text-deep-plum border-b-[3px] border-deep-plum': activeTab === 'recruiting'}"
+                        class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-poppins font-bold text-[#aaa] uppercase text-[0.8rem] hover:text-deep-plum transition-colors">
+                        Recruiting
                     </button>
                     <button @click="activeTab = 'workshops'"
                         :class="{'text-deep-plum border-b-[3px] border-deep-plum': activeTab === 'workshops'}"
@@ -121,12 +150,7 @@
                         x-transition:enter-end="opacity-100 transform translate-x-0" class="tabs-panel">
                         <div class="services-service-flex">
                             <div class="tabs-img">
-                                <img
-                                    src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80">
-                                <div class="services-prog-circle">
-                                    <span class="prog-circle-number">92%</span>
-                                    <span class="prog-circle-label">Focus</span>
-                                </div>
+                                <img src="./assets/images/biz-consulting.jpg">
                             </div>
                             <div class="tabs-text">
                                 <h2>Business Consulting</h2>
@@ -141,21 +165,20 @@
                         </div>
                     </div>
 
-                    <!-- Recruiting Panel -->
-                    <div x-show="activeTab === 'recruiting'" x-transition:enter="transition ease-out duration-300"
+
+                    <!-- VA Panel -->
+                    <div x-show="activeTab === 'va'" x-transition:enter="transition ease-out duration-300"
                         x-transition:enter-start="opacity-0 transform translate-x-4"
                         x-transition:enter-end="opacity-100 transform translate-x-0" class="tabs-panel">
                         <div class="services-service-flex services-flex-reverse">
                             <div class="tabs-img">
-                                <img
-                                    src="https://images.unsplash.com/photo-1521791136064-7986c2959213?auto=format&fit=crop&w=800&q=80">
-                                <div class="services-prog-circle">
-                                    <span class="prog-circle-number copper">100%</span>
-                                    <span class="prog-circle-label">Match</span>
-                                </div>
+                                <img src="./assets/images/va.jpg"
+                                    <!-- "https://images.unsplash.com/photo-1521791136064-7986c2959213?auto=format&fit=crop&w=800&q=80"
+                                    -->
+                                >
                             </div>
                             <div class="tabs-text">
-                                <h2>Staff Recruiting</h2>
+                                <h2>Virtual Support</h2>
                                 <p>Stop the revolving door. Our unique 4-step interactive interview process ensures you
                                     hire the right fit the first time.</p>
                                 <ul class="tabs-check-list">
@@ -167,21 +190,17 @@
                         </div>
                     </div>
 
-                    <!-- VA Support Panel -->
-                    <div x-show="activeTab === 'va'" x-transition:enter="transition ease-out duration-300"
+                    <!-- Recruitment Panel -->
+                    <div x-show="activeTab === 'recruiting'" x-transition:enter="transition ease-out duration-300"
                         x-transition:enter-start="opacity-0 transform translate-x-4"
                         x-transition:enter-end="opacity-100 transform translate-x-0" class="tabs-panel">
                         <div class="services-service-flex">
                             <div class="tabs-img">
                                 <img
                                     src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80">
-                                <div class="services-prog-circle">
-                                    <span class="prog-circle-number">15+</span>
-                                    <span class="prog-circle-label">Weekly Hrs</span>
-                                </div>
                             </div>
                             <div class="tabs-text">
-                                <h2>Virtual Support</h2>
+                                <h2>Staff Recruitment</h2>
                                 <p>Offload the busy work. From data entry to executive scheduling, we handle the details
                                     so you can lead your business.</p>
                                 <ul class="tabs-check-list">
@@ -201,10 +220,7 @@
                             <div class="tabs-img">
                                 <img
                                     src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80">
-                                <div class="services-prog-circle">
-                                    <span class="prog-circle-number copper">4.9/5</span>
-                                    <span class="prog-circle-label">Rating</span>
-                                </div>
+
                             </div>
                             <div class="tabs-text">
                                 <h2>Workshops</h2>
@@ -222,57 +238,71 @@
             </div>
         </div>
 
-        <section class="services-timeline-section container">
-            <h2 class="timeline-title">Process Timeline – 6 Options</h2>
-            <div class="services-timeline-path">
-                <div class="services-timeline-grid">
-                    <div class="services-step-box services-s-1">
-                        <div class="services-balloon"><span>01</span></div>
-                        <div class="services-step-desc">
-                            <h4>Discovery</h4>
-                            <p>We analyze your current rhythms.</p>
+        <section class="services-timeline-section" style="margin-left: calc(-50vw + 50%); width: 100vw;">
+            <div class="container mx-auto px-4">
+                <h2 class="timeline-title text-5xl mb-8 text-center">Process Timeline</h2>
+                <p class="text-center text-gray-600 mb-16 max-w-4xl mx-auto text-lg">
+                    Our proven 6-step process ensures comprehensive business transformation. From discovery to
+                    sustainable growth, we guide you through each phase with expertise and precision.
+                </p>
+
+                <div class="services-timeline-path">
+                    <div class="services-timeline-grid">
+
+                        <div class="services-step-box services-s-1">
+                            <div class="services-step-desc">
+                                <h4 class="font-bold text-slate-900 mb-2 text-lg">Discovery</h4>
+                                <p class="text-base text-slate-500">Free 30-minute initial consultation</p>
+                            </div>
+                            <div class="services-circle">01</div>
                         </div>
-                        <div class="services-node"></div>
-                    </div>
-                    <div class="services-step-box services-s-2">
-                        <div class="services-node"></div>
-                        <div class="services-balloon balloon-offset"><span>02</span></div>
-                        <div class="services-step-desc">
-                            <h4>Audit</h4>
-                            <p>Finding the efficiency leaks.</p>
+
+                        <div class="services-step-box services-s-2">
+                            <div class="services-circle">02</div>
+                            <div class="services-step-desc">
+                                <h4 class="font-bold text-slate-900 mb-2">Audit</h4>
+                                <p class="text-base text-slate-500">Solution-Focused to build on strengths and discuss
+                                    solutions to address hurdles</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="services-step-box services-s-3">
-                        <div class="services-balloon"><span>03</span></div>
-                        <div class="services-step-desc">
-                            <h4>Strategy</h4>
-                            <p>Architecting the custom plan.</p>
+
+                        <div class="services-step-box services-s-3">
+                            <div class="services-step-desc">
+                                <h4 class="font-bold text-slate-900 mb-2">Strategy</h4>
+                                <p class="text-base text-slate-500">Discuss the details of the strengths that are
+                                    working and hurdles that keep the other business stuck.</p>
+                            </div>
+                            <div class="services-circle">03</div>
                         </div>
-                        <div class="services-node"></div>
-                    </div>
-                    <div class="services-step-box services-s-4">
-                        <div class="services-node"></div>
-                        <div class="services-balloon balloon-offset"><span>04</span></div>
-                        <div class="services-step-desc">
-                            <h4>Alignment</h4>
-                            <p>Syncing the team and vision.</p>
+
+                        <div class="services-step-box services-s-4">
+                            <div class="services-circle">04</div>
+                            <div class="services-step-desc">
+                                <h4 class="font-bold text-slate-900 mb-2">Alignment</h4>
+                                <p class="text-base text-slate-500">Onboarding - Start-up Paperwork</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="services-step-box services-s-5">
-                        <div class="services-balloon"><span>05</span></div>
-                        <div class="services-step-desc">
-                            <h4>Execution</h4>
-                            <p>Implementation begins now.</p>
+
+                        <div class="services-step-box services-s-5">
+                            <div class="services-step-desc">
+                                <h4 class="font-bold text-slate-900 mb-2">Execution</h4>
+                                <p class="text-base text-slate-500">Our team works on client projects as part of their
+                                    business (working alongside to build business rapport, achieve goals,
+                                    and ideally for the business to become self-sufficient).</p>
+                            </div>
+                            <div class="services-circle">05</div>
                         </div>
-                        <div class="services-node"></div>
-                    </div>
-                    <div class="services-step-box services-s-6">
-                        <div class="services-node"></div>
-                        <div class="services-balloon balloon-offset"><span>06</span></div>
-                        <div class="services-step-desc">
-                            <h4>Growth</h4>
-                            <p>Scalable results achieved.</p>
+
+                        <div class="services-step-box services-s-6">
+                            <div class="services-circle">06</div>
+                            <div class="services-step-desc">
+                                <h4 class="font-bold text-slate-900 mb-2">Growth</h4>
+                                <p class="text-base text-slate-500">Discuss ongoing client projects or, if
+                                    self-sufficient, offer an "open-door" invitation if the client needs assistance
+                                    in the future.</p>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
