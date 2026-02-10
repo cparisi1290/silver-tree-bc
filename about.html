@@ -88,10 +88,6 @@
         <!-- Mission & What We Do Section -->
         <section id="mission" class="py-32 container mx-auto px-6">
             <div class="flex flex-col md:flex-row gap-16 items-center">
-                <div class="w-full md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978"
-                        class="rounded-3xl shadow-lg w-full object-cover" alt="Collaborative meeting">
-                </div>
                 <div class="w-full md:w-1/2 space-y-12">
                     <div>
                         <h2 class="text-serif text-4xl text-dark-text mb-4">Our mission</h2>
@@ -109,6 +105,10 @@
                         </p>
                     </div>
                 </div>
+                <div class="w-full md:w-1/2">
+                    <img src="/assets/images/mission.jpg" class="rounded-3xl shadow-lg w-3/4 h-auto object-cover"
+                        alt="Collaborative meeting">
+                </div>
             </div>
         </section>
 
@@ -118,6 +118,15 @@
             <div class="container mx-auto px-6">
                 <div class="bg-white p-8 lg:p-12 rounded-2xl shadow-xl w-full">
                     <div class="flex flex-col lg:flex-row items-center gap-16">
+                        <div class="w-full lg:w-1/2 relative">
+                            <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
+                                <img src="/assets/images/values-left.jpg" class="w-full h-[500px] object-cover">
+                            </div>
+                            <div
+                                class="absolute -top-6 -right-6 w-full h-full border-4 border-copper/20 rounded-2xl -z-10">
+                            </div>
+                        </div>
+
                         <div class="w-full lg:w-1/2" x-data="{ active: 'innovation' }">
                             <style>
                                 .services-timeline-path::after {
@@ -165,6 +174,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="pl-8 cursor-pointer group" @mouseenter="active = 'innovation'">
                                     <h4 class="font-bold text-xl mb-2 transition-colors duration-300"
                                         :class="active === 'innovation' ? 'text-copper' : 'text-dark-text'">
@@ -197,15 +207,6 @@
                                         Every improvement begins with listening to our community.
                                     </p>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="w-full lg:w-1/2 relative">
-                            <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
-                                <img src="/assets/images/values.jpg" class="w-full h-[500px] object-cover">
-                            </div>
-                            <div
-                                class="absolute -top-6 -right-6 w-full h-full border-4 border-copper/20 rounded-2xl -z-10">
                             </div>
                         </div>
                     </div>

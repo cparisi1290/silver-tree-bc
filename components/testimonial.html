@@ -23,7 +23,7 @@
             </div>
             <div class="flex flex-col items-center">
                 <div class="flex items-center gap-6 mb-10 h-24">
-                    <div class="w-20 h-20 rounded-full overflow-hidden border-2 border-copper shadow-md shrink-0 transition-opacity duration-300"
+                    <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-copper shadow-md shrink-0 transition-opacity duration-300"
                         :class="isTransitioning ? 'opacity-0' : 'opacity-100'">
                         <img :src="currentTestimonial.image" :alt="currentTestimonial.name"
                             class="w-full h-full object-cover">
@@ -32,7 +32,7 @@
                     <div class="text-left transition-opacity duration-300"
                         :class="isTransitioning ? 'opacity-0' : 'opacity-100'">
                         <h5 class="text-copper font-bold text-lg italic mb-0" x-text="currentTestimonial.name"></h5>
-                        <p class="text-dark-text text-xs tracking-wide uppercase opacity-70"
+                        <p class="text-dark-text text-sm tracking-wide uppercase opacity-70"
                             x-text="currentTestimonial.title"></p>
                     </div>
                 </div>
