@@ -119,40 +119,82 @@
                 <div class="bg-white p-8 lg:p-12 rounded-2xl shadow-xl w-full">
                     <div class="flex flex-col lg:flex-row items-center gap-16">
                         <div class="w-full lg:w-1/2" x-data="{ active: 'innovation' }">
+                            <style>
+                                .services-timeline-path::after {
+                                    display: none !important;
+                                }
+
+                                /* Change gradient to vertical for the core values bar */
+                                .progress-gradient-vertical {
+                                    background: linear-gradient(180deg, #6eb9e2 25%, #aed1e3 50%, #f6dbc5 100%);
+                                    box-shadow: 0 0 15px rgba(184, 115, 51, 0.3);
+                                }
+
+                                /* Subtle pulse for the active milestone */
+                                .milestone-pulse {
+                                    animation: shadow-pulse 2s infinite;
+                                }
+
+                                @keyframes shadow-pulse {
+                                    0% {
+                                        box-shadow: 0 0 0 0px rgba(184, 115, 51, 0.4);
+                                    }
+
+                                    70% {
+                                        box-shadow: 0 0 0 15px rgba(184, 115, 51, 0);
+                                    }
+
+                                    100% {
+                                        box-shadow: 0 0 0 0px rgba(184, 115, 51, 0);
+                                    }
+                                }
+                            </style>
                             <h2 class="text-serif text-5xl text-dark-text mb-12">Core values</h2>
 
                             <div class="space-y-10 relative">
-                                <div class="absolute left-0 top-0 w-1 h-full bg-powder-blue rounded-full">
-                                    <div class="bg-copper w-full transition-all duration-500 rounded-full"
-                                        :style="active === 'innovation' ? 'height: 25%' : active === 'reliable' ? 'height: 50%' : active === 'customer' ? 'height: 75%' : 'height: 100%'">
+                                <div class="absolute left-0 top-0 w-[2px] h-full bg-slate-200/50 rounded-full z-0">
+                                    <div class="progress-gradient-vertical w-full transition-all duration-1000 ease-in-out relative"
+                                        :style="{
+                                                    'innovation': 'height: 15%',
+                                                    'reliable': 'height: 50%',
+                                                    'customer': 'height: 100%'
+                                                 }[active]">
+
+                                        <div
+                                            class="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-4 bg-white rounded-full blur-[2px] opacity-70 z-10">
+                                        </div>
                                     </div>
                                 </div>
-
                                 <div class="pl-8 cursor-pointer group" @mouseenter="active = 'innovation'">
-                                    <h4 class="font-bold text-xl mb-2 transition-colors"
-                                        :class="active === 'innovation' ? 'text-copper' : 'text-dark-text'">Innovation
-                                        first:</h4>
-                                    <p class="text-dark-grey">We set trends by pushing boundaries in predictive
-                                        technology.
+                                    <h4 class="font-bold text-xl mb-2 transition-colors duration-300"
+                                        :class="active === 'innovation' ? 'text-copper' : 'text-dark-text'">
+                                        Innovation first:
+                                    </h4>
+                                    <p class="text-dark-grey transition-opacity duration-300"
+                                        :class="active === 'innovation' ? 'opacity-100' : 'opacity-70'">
+                                        We set trends by pushing boundaries in predictive technology.
                                     </p>
                                 </div>
 
                                 <div class="pl-8 cursor-pointer group" @mouseenter="active = 'reliable'">
-                                    <h4 class="font-bold text-xl mb-2 transition-colors"
-                                        :class="active === 'reliable' ? 'text-copper' : 'text-dark-text'">Always
-                                        reliable:
+                                    <h4 class="font-bold text-xl mb-2 transition-colors duration-300"
+                                        :class="active === 'reliable' ? 'text-copper' : 'text-dark-text'">
+                                        Always reliable:
                                     </h4>
-                                    <p class="text-dark-grey">Trust is earned through consistency and platform
-                                        performance.
+                                    <p class="text-dark-grey transition-opacity duration-300"
+                                        :class="active === 'reliable' ? 'opacity-100' : 'opacity-70'">
+                                        Trust is earned through consistency and platform performance.
                                     </p>
                                 </div>
 
                                 <div class="pl-8 cursor-pointer group" @mouseenter="active = 'customer'">
-                                    <h4 class="font-bold text-xl mb-2 transition-colors"
-                                        :class="active === 'customer' ? 'text-copper' : 'text-dark-text'">Customer
-                                        centric:
+                                    <h4 class="font-bold text-xl mb-2 transition-colors duration-300"
+                                        :class="active === 'customer' ? 'text-copper' : 'text-dark-text'">
+                                        Customer centric:
                                     </h4>
-                                    <p class="text-dark-grey">Every improvement begins with listening to our community.
+                                    <p class="text-dark-grey transition-opacity duration-300"
+                                        :class="active === 'customer' ? 'opacity-100' : 'opacity-70'">
+                                        Every improvement begins with listening to our community.
                                     </p>
                                 </div>
                             </div>
@@ -160,8 +202,7 @@
 
                         <div class="w-full lg:w-1/2 relative">
                             <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
-                                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
-                                    class="w-full h-[500px] object-cover">
+                                <img src="/assets/images/values.jpg" class="w-full h-[500px] object-cover">
                             </div>
                             <div
                                 class="absolute -top-6 -right-6 w-full h-full border-4 border-copper/20 rounded-2xl -z-10">

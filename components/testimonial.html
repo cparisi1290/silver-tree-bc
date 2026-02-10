@@ -3,7 +3,7 @@
     x-init="console.log('Testimonial component initialized')">
     <div class="container mx-auto px-6">
         <!-- Header Section -->
-        <div class="text-center mb-32">
+        <div class="text-center mb-24">
             <h2 class="text-serif text-5xl text-dark-text mb-6">What Our Clients Say</h2>
             <p class="text-lg text-dark-grey max-w-2xl mx-auto">
                 Don't just take our word for it. Hear from businesses we've helped transform and grow.
@@ -11,33 +11,35 @@
         </div>
 
         <div class="max-w-4xl mx-auto text-center">
-            <div class="testimonial-content transition-opacity duration-300 mb-12 flex items-start gap-6"
-                :class="isTransitioning ? 'opacity-0' : 'opacity-100'">
-                <i class="fas fa-quote-left text-9xl text-copper opacity-30 -mt-16 -mr-20"></i>
-                <p class="text-lg md:text-xl lg:text-2xl text-dark-text leading-relaxed italic font-medium text-left"
-                    x-text="currentTestimonial.quote">
-                    ""
-                </p>
+            <div class="relative w-full mb-20 h-[220px] md:h-[180px] lg:h-[160px]">
+                <i
+                    class="fas fa-quote-left text-9xl text-copper opacity-10 absolute top-0 left-0 pointer-events-none"></i>
+                <div class="absolute inset-0 flex items-center justify-center transition-all duration-500 ease-in-out"
+                    :class="isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'">
+                    <p class="text-lg md:text-xl lg:text-2xl text-dark-text leading-relaxed italic font-medium w-full"
+                        x-text="currentTestimonial.quote">
+                    </p>
+                </div>
             </div>
-
             <div class="flex flex-col items-center">
-                <div class="testimonial-image transition-opacity duration-300 w-24 h-24 rounded-full overflow-hidden mb-4 border-2 border-copper shadow-md"
-                    :class="isTransitioning ? 'opacity-0' : 'opacity-100'">
-                    <img :src="currentTestimonial.image" :alt="currentTestimonial.name"
-                        class="w-full h-full object-cover">
+                <div class="flex items-center gap-6 mb-10 h-24">
+                    <div class="w-20 h-20 rounded-full overflow-hidden border-2 border-copper shadow-md shrink-0 transition-opacity duration-300"
+                        :class="isTransitioning ? 'opacity-0' : 'opacity-100'">
+                        <img :src="currentTestimonial.image" :alt="currentTestimonial.name"
+                            class="w-full h-full object-cover">
+                    </div>
+
+                    <div class="text-left transition-opacity duration-300"
+                        :class="isTransitioning ? 'opacity-0' : 'opacity-100'">
+                        <h5 class="text-copper font-bold text-lg italic mb-0" x-text="currentTestimonial.name"></h5>
+                        <p class="text-dark-text text-xs tracking-wide uppercase opacity-70"
+                            x-text="currentTestimonial.title"></p>
+                    </div>
                 </div>
 
-                <div class="mb-8">
-                    <h5 class="text-copper font-bold text-lg italic mb-1" x-text="currentTestimonial.name">Gahrrett
-                        Thomas</h5>
-                    <p class="text-dark-text text-sm tracking-wide uppercase" x-text="currentTestimonial.title">Graphic
-                        and Web Designer</p>
-                </div>
-
-                <div class="flex justify-center items-center space-x-6">
-                    <button @click="previousTestimonial()"
-                        class="w-8 h-8 rounded-full text-copper flex items-center justify-center hover:bg-opacity-80 transition-all duration-200">
-                        <i class="fas fa-chevron-left text-2xl"></i>
+                <div class="flex justify-center items-center space-x-8">
+                    <button @click="previousTestimonial()" class="text-copper hover:scale-125 transition-transform p-2">
+                        <i class="fas fa-chevron-left text-xl"></i>
                     </button>
 
                     <div class="flex space-x-3">
@@ -47,32 +49,30 @@
                         </template>
                     </div>
 
-                    <button @click="nextTestimonial()"
-                        class="w-8 h-8 rounded-full text-copper flex items-center justify-center hover:bg-opacity-80 transition-all duration-200">
-                        <i class="fas fa-chevron-right text-2xl"></i>
+                    <button @click="nextTestimonial()" class="text-copper hover:scale-125 transition-transform p-2">
+                        <i class="fas fa-chevron-right text-xl"></i>
                     </button>
                 </div>
             </div>
         </div>
-    </div>
 
-    <style>
-        /* Navigation Dot Styles */
-        .dot {
-            height: 12px;
-            width: 12px;
-            background-color: #ede3cc;
-            /* Slate 400 */
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.3s ease;
-            cursor: pointer;
-            margin: 0 6px;
-        }
+        <style>
+            /* Navigation Dot Styles */
+            .dot {
+                height: 12px;
+                width: 12px;
+                background-color: #ede3cc;
+                /* Slate 400 */
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.3s ease;
+                cursor: pointer;
+                margin: 0 6px;
+            }
 
-        .dot.active {
-            background-color: var(--copper);
-            /* Blue 600 */
-        }
-    </style>
+            .dot.active {
+                background-color: var(--copper);
+                /* Blue 600 */
+            }
+        </style>
 </section>
