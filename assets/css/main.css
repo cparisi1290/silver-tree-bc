@@ -1021,9 +1021,9 @@ nav ul a {
 
 /* --- TIMELINE --- */
 .services-timeline-section {
-    padding: 200px 0;
+    padding: 100px 0;
     overflow: hidden;
-    background: var(--powder-blue);
+    background: var(--light-text);
 }
 
 .services-timeline-path {
@@ -1108,7 +1108,7 @@ nav ul a {
     justify-content: center;
     z-index: 10;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    color: white;
+    color: var(--dark-grey);
     font-weight: 700;
     font-size: 1.1rem;
     position: absolute;
@@ -1129,27 +1129,27 @@ nav ul a {
 
 /* STEP COLORS */
 .services-s-1 {
-    --step-color: #153eaf;
+    --step-color: #cdc9e0;
 }
 
 .services-s-2 {
-    --step-color: #2d56c7;
+    --step-color: #c5e0d6;
 }
 
 .services-s-3 {
-    --step-color: #4e76e7;
+    --step-color: #bdd4e0;
 }
 
 .services-s-4 {
-    --step-color: #4e76e7;
+    --step-color: #e0d2d7;
 }
 
 .services-s-5 {
-    --step-color: #2d56c7;
+    --step-color: #f6dbc5;
 }
 
 .services-s-6 {
-    --step-color: #153eaf;
+    --step-color: #d1e0e0;
 }
 
 /* Timeline Responsive */

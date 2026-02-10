@@ -2,6 +2,14 @@
     x-data="window.location.pathname.includes('services.html') ? servicesTestimonialSlider() : testimonialSlider()"
     x-init="console.log('Testimonial component initialized')">
     <div class="container mx-auto px-6">
+        <!-- Header Section -->
+        <div class="text-center mb-32">
+            <h2 class="text-serif text-5xl text-dark-text mb-6">What Our Clients Say</h2>
+            <p class="text-lg text-dark-grey max-w-2xl mx-auto">
+                Don't just take our word for it. Hear from businesses we've helped transform and grow.
+            </p>
+        </div>
+
         <div class="max-w-4xl mx-auto text-center">
             <div class="testimonial-content transition-opacity duration-300 mb-12 flex items-start gap-6"
                 :class="isTransitioning ? 'opacity-0' : 'opacity-100'">
