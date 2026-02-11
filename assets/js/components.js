@@ -21,16 +21,16 @@ window.testimonialSlider = function () {
                 image: "./assets/images/tekcheck-computer-services.png"
             },
             {
-                quote: "Ruth can help you get your business organized and growing. A godsend for the Solopreneur!",
-                name: "YB",
-                title: "Revitalized Communities Funding",
-                image: "./assets/images/revitalized-communities-funding.png"
-            },
-            {
                 quote: "Ruth and her team of business partners ARE Truly here to help and can provide such a wide variety of supportive and expansive needs for businesses and communities we all live in. Such a great individual and 5 STARS recommended!",
                 name: "DD",
                 title: "Primerica Financial Services",
                 image: "./assets/images/primerica-financial-services.png"
+            },
+            {
+                quote: "Ruth can help you get your business organized and growing. A godsend for the Solopreneur!",
+                name: "YB",
+                title: "Revitalized Communities Funding",
+                image: "./assets/images/revitalized-communities-funding.png"
             },
             {
                 quote: "Ruth and her team of business partners ARE Truly here to help and can provide such a wide variety of supportive and expansive needs for businesses and communities we all live in. Such a great individual and 5 STARS recommended!",
@@ -87,16 +87,16 @@ window.servicesTestimonialSlider = function () {
                 image: "./assets/images/tekcheck-computer-services.png"
             },
             {
-                quote: "Ruth can help you get your business organized and growing. A godsend for the Solopreneur!",
-                name: "YB",
-                title: "Revitalized Communities Funding",
-                image: "./assets/images/revitalized-communities-funding.png"
-            },
-            {
                 quote: "Ruth and her team of business partners ARE Truly here to help and can provide such a wide variety of supportive and expansive needs for businesses and communities we all live in. Such a great individual and 5 STARS recommended!",
                 name: "DD",
                 title: "Primerica Financial Services",
                 image: "./assets/images/primerica-financial-services.png"
+            },
+            {
+                quote: "Ruth can help you get your business organized and growing. A godsend for the Solopreneur!",
+                name: "YB",
+                title: "Revitalized Communities Funding",
+                image: "./assets/images/revitalized-communities-funding.png"
             },
             {
                 quote: "Ruth and her team of business partners ARE Truly here to help and can provide such a wide variety of supportive and expansive needs for businesses and communities we all live in. Such a great individual and 5 STARS recommended!",
