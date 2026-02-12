@@ -1,78 +1,72 @@
-<section class="py-32 bg-light-text"
-    x-data="window.location.pathname.includes('services.html') ? servicesTestimonialSlider() : testimonialSlider()"
-    x-init="console.log('Testimonial component initialized')">
-    <div class="container mx-auto px-6">
-        <!-- Header Section -->
-        <div class="text-center mb-24">
-            <h2 class="text-serif text-5xl text-dark-text mb-6">What Our Clients Say</h2>
-            <p class="text-lg text-dark-grey max-w-2xl mx-auto">
-                Don't just take our word for it. Hear from businesses we've helped transform and grow.
-            </p>
-        </div>
+<section class="bg-light-text py-20 px-6 overflow-hidden" x-data="testimonialSlider()" x-init="currentIndex = 0">
+    <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-4xl md:text-5xl font-serif font-bold text-dark-text mb-6">
+            What Our Clients Say
+        </h2>
 
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="relative w-full mb-20 h-[220px] md:h-[180px] lg:h-[160px]">
-                <i
-                    class="fas fa-quote-left text-9xl text-copper opacity-10 absolute top-0 left-0 pointer-events-none"></i>
-                <div class="absolute inset-0 flex items-center justify-center transition-all duration-500 ease-in-out"
-                    :class="isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'">
-                    <p class="text-lg md:text-xl lg:text-2xl text-dark-text leading-relaxed italic font-medium w-full"
-                        x-text="currentTestimonial.quote">
-                    </p>
-                </div>
-            </div>
-            <div class="flex flex-col items-center">
-                <div class="flex items-center gap-6 mb-10 h-24">
-                    <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-copper shadow-md shrink-0 transition-opacity duration-300"
-                        :class="isTransitioning ? 'opacity-0' : 'opacity-100'">
-                        <img :src="currentTestimonial.image" :alt="currentTestimonial.name"
-                            class="w-full h-full object-cover">
+        <p class="text-gray-600 mb-16 max-w-lg mx-auto leading-relaxed">
+            Don't just take our word for it. Hear from businesses we've helped transform and grow.
+        </p>
+
+        <div class="relative max-w-2xl mx-auto px-4 select-none">
+            <span
+                class="absolute -top-10 -left-4 md:left-0 text-[170px] leading-none text-[#d4a373]/20 font-serif select-none z-0">
+                “
+            </span>
+
+            <div class="relative z-10 block md:grid md:grid-cols-1">
+                <template x-for="(testimonial, index) in testimonials" :key="index">
+                    <div x-show="currentIndex === index || window.innerWidth >= 768"
+                        class="flex flex-col justify-between transition-all duration-500 ease-in-out md:col-start-1 md:row-start-1"
+                        :class="currentIndex === index ? 'opacity-100 translate-y-0 z-20' : 'opacity-0 translate-y-4 z-0 pointer-events-none'"
+                        x-cloak>
+                        <div class="pt-4 min-h-[140px] md:min-h-0 flex items-center justify-center">
+                            <p class="text-lg md:text-xl italic text-gray-800 leading-relaxed text-left md:text-center"
+                                x-text="testimonial.quote">
+                            </p>
+                        </div>
+
+                        <div class="flex flex-row items-center justify-center space-x-4 mt-12 pb-2">
+                            <div class="relative shrink-0">
+                                <img :src="testimonial.image" :alt="testimonial.name"
+                                    class="w-16 h-16 rounded-full border-2 border-[#d4a373]/30 object-cover" />
+                            </div>
+                            <div class="text-left">
+                                <h4 class="font-bold text-[#d4a373] text-lg leading-tight" x-text="testimonial.name">
+                                </h4>
+                                <p class="text-xs uppercase tracking-widest text-gray-400 font-semibold"
+                                    x-text="testimonial.title"></p>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="text-left transition-opacity duration-300"
-                        :class="isTransitioning ? 'opacity-0' : 'opacity-100'">
-                        <h5 class="text-copper font-bold text-lg italic mb-0" x-text="currentTestimonial.name"></h5>
-                        <p class="text-dark-text text-sm tracking-wide uppercase opacity-70"
-                            x-text="currentTestimonial.title"></p>
-                    </div>
-                </div>
-
-                <div class="flex justify-center items-center space-x-8">
-                    <button @click="previousTestimonial()" class="text-copper hover:scale-125 transition-transform p-2">
-                        <i class="fas fa-chevron-left text-xl"></i>
-                    </button>
-
-                    <div class="flex space-x-3">
-                        <template x-for="(testimonial, index) in testimonials" :key="index">
-                            <span class="dot" :class="index === currentIndex ? 'active' : ''"
-                                @click="currentIndex = index"></span>
-                        </template>
-                    </div>
-
-                    <button @click="nextTestimonial()" class="text-copper hover:scale-125 transition-transform p-2">
-                        <i class="fas fa-chevron-right text-xl"></i>
-                    </button>
-                </div>
+                </template>
             </div>
         </div>
 
-        <style>
-            /* Navigation Dot Styles */
-            .dot {
-                height: 12px;
-                width: 12px;
-                background-color: #ede3cc;
-                /* Slate 400 */
-                border-radius: 50%;
-                display: inline-block;
-                transition: background-color 0.3s ease;
-                cursor: pointer;
-                margin: 0 6px;
-            }
+        <div class="flex items-center justify-center space-x-8 mt-12">
+            <button @click="previousTestimonial()"
+                class="text-[#d4a373] hover:scale-110 active:scale-95 transition-transform p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
 
-            .dot.active {
-                background-color: var(--copper);
-                /* Blue 600 */
-            }
-        </style>
+            <div class="flex space-x-3">
+                <template x-for="(testimonial, index) in testimonials" :key="index">
+                    <button @click="currentIndex = index" class="w-2.5 h-2.5 rounded-full transition-all duration-300"
+                        :class="currentIndex === index ? 'bg-[#d4a373] scale-125' : 'bg-[#d4a373]/30 hover:bg-[#d4a373]/50'">
+                    </button>
+                </template>
+            </div>
+
+            <button @click="nextTestimonial()"
+                class="text-[#d4a373] hover:scale-110 active:scale-95 transition-transform p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+    </div>
 </section>

@@ -152,12 +152,11 @@ async function loadComponent(elementId, filePath) {
             }
         }
 
-        // Force browser to re-evaluate the component
-        if (window.Alpine && window.Alpine.version) {
-            console.log('Re-initializing Alpine.js after component load...');
-            setTimeout(() => {
-                window.Alpine.start();
-            }, 100);
+        // Initialize testimonial if this is the testimonial component
+        if (elementId === 'testimonial-placeholder') {
+            console.log('Testimonial component loaded, triggering initialization...');
+            // Trigger custom event for testimonial initialization
+            window.dispatchEvent(new CustomEvent('testimonialLoaded'));
         }
 
         console.log(`Component loaded: ${filePath}`);

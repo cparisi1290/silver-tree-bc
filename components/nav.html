@@ -1,26 +1,54 @@
-<header class="bg-light-text shadow-2xl border-b border-gray-200" style="z-index: 50; position: relative;">
-    <nav class="container mx-auto px-6 py-10 flex items-center justify-between">
-        <a href="index.html" class="text-3xl font-bold text-deep-plum font-poppins logo tracking-[0.03em]">
-            <div>SILVER<span class="text-plum font-light">TREE</span></div>
-            <div class="text-sm font-normal text-dark-text tracking-[0.1em] text-center -mt-2">Business Consulting</div>
+<header x-data="{ mobileMenuOpen: false }"
+    class="bg-light-text py-6 px-6 md:px-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07)] border-b border-gray-100 sticky md:relative top-0 z-50">
+
+    <div class="w-full mx-auto flex justify-between items-center">
+        <a href="index.html" class="flex flex-col md:ml-20 lg:ml-40 transition-all">
+            <h2 class="text-3xl font-bold tracking-tight text-deep-plum">
+                SILVER<span class="text-plum">TREE</span>
+            </h2>
+            <p class="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-semibold">
+                Business Consulting
+            </p>
         </a>
-        <div class="flex items-center gap-8 nav-right">
-            <ul class="hidden md:flex gap-6 font-medium font-poppins tracking-wide">
-                <li><a href="services.html"
-                        class="text-dark-text hover:text-copper transition-colors font-medium">Services</a></li>
-                <li><a href="case-study.html"
-                        class="text-dark-text hover:text-copper transition-colors font-medium">Case
-                        Study</a>
-                </li>
-                <li><a href="about.html"
-                        class="text-dark-text hover:text-copper transition-colors font-medium">About</a>
-                </li>
-            </ul>
-            <div class="nav-buttons">
-                <a href="https://calendly.com/mosaicbusinesssolutionsllc" target="_blank"
-                    class="bg-deep-plum text-light-text px-6 py-2 rounded-[50px] font-medium hover:scale-105 transition-transform primary-btn">Schedule
-                    Call</a>
-            </div>
+
+        <nav class="hidden md:flex items-center space-x-10 text-gray-700 font-medium">
+            <a href="services.html" class="hover:text-deep-plum transition-colors">Services</a>
+            <a href="case-study.html" class="hover:text-deep-plum transition-colors">Case Study</a>
+            <a href="about.html" class="hover:text-deep-plum transition-colors">About</a>
+            <a href="https://calendly.com/mosaicbusinesssolutionsllc" target="_blank"
+                class="px-8 py-2.5 bg-deep-plum text-light-text rounded-full hover:bg-[#5a446e] transition-all shadow-md active:scale-95">
+                Schedule Call
+            </a>
+        </nav>
+
+        <div class="md:hidden">
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-deep-plum focus:outline-none p-2">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                    <path x-show="mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
         </div>
-    </nav>
+    </div>
+
+    <div x-show="mobileMenuOpen" @click.away="mobileMenuOpen = false"
+        x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-4"
+        x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150"
+        x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-4"
+        class="md:hidden bg-light-text border-t border-gray-100 absolute left-0 w-full shadow-2xl z-50">
+
+        <nav class="flex flex-col items-center py-12 px-6 space-y-8">
+            <a href="services.html" class="text-xl text-gray-700 hover:text-deep-plum">Services</a>
+            <a href="case-study.html" class="text-xl text-gray-700 hover:text-deep-plum">Case Study</a>
+            <a href="about.html" class="text-xl text-gray-700 hover:text-deep-plum">About</a>
+            <a href="contact.html" class="text-xl text-gray-700 hover:text-deep-plum">Contact</a>
+
+            <a href="https://calendly.com/mosaicbusinesssolutionsllc"
+                class="w-full max-w-xs py-4 bg-deep-plum text-light-text text-center rounded-full font-bold text-lg shadow-lg">
+                Schedule Call
+            </a>
+        </nav>
+    </div>
 </header>
