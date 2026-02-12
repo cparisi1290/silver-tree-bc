@@ -1,6 +1,19 @@
-document.addEventListener("DOMContentLoaded", () => {
+// BADGE ANIMATION FUNCTIONALITY
+function initBadgeAnimation() {
     const badgeContainer = document.querySelector(".badges");
     const badges = Array.from(document.querySelectorAll(".badges img"));
+
+    if (!badgeContainer || badges.length === 0) {
+        console.log('No badge container or badges found');
+        return;
+    }
+
+    // Add initial hidden state to badges
+    badges.forEach(badge => {
+        badge.style.opacity = '0';
+        badge.style.transform = 'translateY(20px)';
+        badge.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    });
 
     const observerOptions = {
         threshold: 0.1, // Trigger when 10% of the section is visible
@@ -12,7 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Animate badges from left to right (original order)
                 badges.forEach((badge, index) => {
                     setTimeout(() => {
-                        badge.classList.add("reveal");
+                        badge.style.opacity = '0.7';
+                        badge.style.transform = 'translateY(0)';
                     }, index * 150); // 150ms stagger between each badge
                 });
 
@@ -23,6 +37,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }, observerOptions);
 
     observer.observe(badgeContainer);
+    console.log('Badge animation initialized');
+}
+
+// Initialize badge animation when DOM is loaded
+document.addEventListener("DOMContentLoaded", () => {
+    initBadgeAnimation();
 });
 
 // TESTIMONIAL SLIDER FUNCTIONALITY
