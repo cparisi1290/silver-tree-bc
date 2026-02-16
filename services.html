@@ -32,6 +32,12 @@
                         'light-text': '#f7f5f3',
                         'dark-text': '#160F1A',
                         'plum': '#9b7eac',
+                        's1': '#cdc9e0',
+                        's2': '#c5e0d6',
+                        's3': '#bdd4e0',
+                        's4': '#e0d2d7',
+                        's5': '#f6dbc5',
+                        's6': '#d1e0e0'
                     },
                     fontFamily: {
                         'serif': ['DM Serif Display', 'serif'],
@@ -46,265 +52,477 @@
 </head>
 
 <body>
-
-
-    <!-- Navigation will be injected here -->
     <div id="nav-placeholder"></div>
-    <div class="container">
 
-        <!-- Services Hero Section -->
-        <section class="min-h-[800px] bg-cover bg-center bg-no-repeat flex items-center justify-center relative "
-            style="background-image: url('./assets/images/silver-tree-right.png'); margin-left: calc(-50vw + 50%); width: 100vw;">
-            <div class="absolute inset-0"></div>
-            <div class="container mx-auto px-4 relative z-10 lg:-translate-x-16">
+    <section
+        class="relative min-h-[600px] md:min-h-[800px] flex items-center justify-center overflow-hidden py-12 md:py-0">
+
+        <div class="absolute inset-0 z-0">
+            <img src="./assets/images/silver-tree-right.png" alt="Background"
+                class="w-full h-full object-cover object-right md:object-center">
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10 lg:-translate-x-16">
+            <div
+                class="bg-light-text mx-auto px-6 py-12 md:px-[80px] md:h-[450px] w-full max-w-[1200px] rounded-[24px] shadow-2xl flex items-center relative">
+
+                <div class="w-full lg:w-[65%] z-10 text-center md:text-left">
+                    <h1 class="text-3xl md:text-6xl text-deep-plum mb-6 leading-[1.1] tracking-tight font-serif">
+                        Hire Experts. Get Work Done. Scale Faster.
+                    </h1>
+
+                    <p
+                        class="text-base md:text-2xl text-dark-text mb-10 font-light leading-relaxed max-w-[550px] mx-auto md:mx-0">
+                        Silver Tree provides the stability and strategy small business
+                        owners need to move past the "stuck" phase and into growth.
+                    </p>
+
+                    <a href="https://calendly.com/mosaicbusinesssolutionsllc" target="_blank"
+                        class="inline-block bg-deep-plum text-light-text px-8 md:px-12 py-4 rounded-full font-semibold hover:scale-105 transition-all shadow-lg text-sm md:text-base">
+                        Get Started Now
+                    </a>
+                </div>
 
                 <div
-                    class="bg-light-text mx-auto px-10 md:px-[80px] h-[450px] w-full max-w-[1200px] rounded-[24px] shadow-2xl flex items-center relative">
+                    class="hidden lg:block absolute -right-24 top-1/2 -translate-y-1/2 z-20 w-[520px] h-[600px] rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
+                    <img src="/assets/images/services-hero.jpg" alt="Coffee Chat" class="w-full h-full object-cover" />
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="w-full lg:w-[65%] z-10 text-left">
-                        <h1 class="text-4xl md:text-6xl text-deep-plum mb-6 leading-[1.1] tracking-tight text-serif">
-                            Hire Experts. Get Work Done. Scale Faster.
-                        </h1>
-                        <p class="text-lg md:text-2xl text-dark-text mb-10 font-light leading-relaxed max-w-[550px]">
-                            Silver Tree provides the stability and strategy small business
-                            owners need to move past the "stuck" phase and into growth.
+    <section class="py-16 md:py-[120px] lg:py-[200px] container mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-[80px] items-center">
+
+            <div class="relative flex justify-center order-2 lg:order-1">
+                <img src="/assets/images/difference.jpg" alt="What Makes Us Different"
+                    class="w-full md:w-3/4 h-auto rounded-2xl shadow-xl object-cover">
+            </div>
+
+            <div class="order-1 lg:order-2 text-center lg:text-left">
+                <h2 class="text-3xl md:text-5xl text-dark-text leading-[1.1] font-serif mb-6">
+                    What Makes Us Different?
+                </h2>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    We combine a Master's-level understanding of psychology with a decade of operational expertise.
+                    We align your business with your natural rhythms.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-10 lg:mt-[100px]">
+
+                    <div
+                        class="backdrop-blur-sm bg-light-text/30 p-6 rounded-xl shadow-xl border border-white/20 flex flex-col items-center lg:items-start">
+                        <h4 class="text-lg font-bold text-deep-plum mb-2">
+                            Psychology-Backed
+                        </h4>
+                        <p class="text-sm text-dark-grey">
+                            Decisions based on human behavior.
                         </p>
-                        <a href="https://calendly.com/mosaicbusinesssolutionsllc" target="_blank"
-                            class="inline-block bg-deep-plum text-light-text px-12 py-4 rounded-full font-semibold hover:scale-105 transition-all shadow-lg">
-                            Get Started Now
-                        </a>
                     </div>
 
                     <div
-                        class="hidden lg:block absolute -right-24 top-1/2 -translate-y-1/2 z-20 w-[520px] h-[600px] rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
-                        <img src="/assets/images/services-hero.jpg" alt="Coffee Chat"
-                            class="w-full h-full object-cover" />
+                        class="backdrop-blur-sm bg-light-text/30 p-6 rounded-xl shadow-xl border border-white/20 flex flex-col items-center lg:items-start">
+                        <h4 class="text-lg font-bold text-deep-plum mb-2">
+                            Process Oriented
+                        </h4>
+                        <p class="text-sm text-dark-grey">
+                            Reliable foundations for flight and sustainable growth.
+                        </p>
                     </div>
-                </div>
 
-            </div>
-        </section>
-
-        <section class="py-[200px]">
-            <div class="grid grid-cols-2 gap-[80px] items-center">
-                <div class="relative flex justify-center">
-                    <img src="/assets/images/difference.jpg" alt="What Makes Us Different"
-                        class="w-3/4 h-auto rounded-2xl shadow-xl">
-                </div>
-                <div>
-                    <!-- <p class="text-copper font-bold text-[0.8rem] uppercase tracking-[2px]">Silver Tree Edge</p> -->
-                    <h2 class="text-5xl text-dark-text leading-[1.1] my-4">What Makes Us Different?</h2>
-                    <p>We combine a Master's-level understanding of psychology with a decade of operational expertise.
-                        We align your business with your natural rhythms.</p>
-                    <div class="grid grid-cols-2 gap-5 mt-[150px]">
-                        <div
-                            class="text-lg font-sans backdrop-blur-sm bg-white/30 bg-opacity-80 p-6 rounded-xl shadow-xl border border-white/20">
-                            <h4>
-                                Psychology-Backed</h4>
-                            <p class="text-sm text-dark-grey ">
-                                Decisions based on human behavior.</p>
-                        </div>
-                        <div
-                            class="text-lg font-sans backdrop-blur-sm bg-white/30 bg-opacity-80 p-6 rounded-xl shadow-xl border border-white/20">
-                            <h4>
-                                Process Oriented</h4>
-                            <p class="text-sm text-dark-grey">
-                                Reliable foundations for flight. Reliable foundations for flight. Reliable foundations
-                                for flight. </p>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Tabbed Services Section with Alpine.js -->
-        <div class="container">
-            <h2 class="section-title text-5xl text-dark-text">Our Services</h2>
-            <div x-data="{ activeTab: 'consulting' }" class="tabs-container">
-                <!-- Tab Navigation -->
-                <div class="flex justify-center py-5  border-b border-[#e7e7e7] shadow-lg">
-                    <button @click="activeTab = 'consulting'"
-                        :class="{'text-deep-plum border-b-[3px] border-deeptext-deep-plum': activeTab === 'consulting'}"
-                        class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-sans font-bold text-[#aaa] uppercase text-xl hover:text-deep-plum transition-colors">
-                        Consulting
-                    </button>
-                    <button @click="activeTab = 'va'"
-                        :class="{'text-deep-plum border-b-[3px] border-deeptext-deep-plum': activeTab === 'va'}"
-                        class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-sans font-bold text-[#aaa] uppercase text-xl hover:text-deep-plum transition-colors">
-                        VA Support
-                    </button>
-                    <button @click="activeTab = 'recruiting'"
-                        :class="{'text-deep-plum border-b-[3px] border-deeptext-deep-plum': activeTab === 'recruiting'}"
-                        class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-sans font-bold text-[#aaa] uppercase text-xl hover:text-deep-plum transition-colors">
-                        Recruiting
-                    </button>
-                    <button @click="activeTab = 'workshops'"
-                        :class="{'text-deep-plum border-b-[3px] border-deeptext-deep-plum': activeTab === 'workshops'}"
-                        class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-sans font-bold text-[#aaa] uppercase text-xl hover:text-deep-plum transition-colors">
-                        Workshops
-                    </button>
+    <!-- Tabbed Services Section ON DESKTOP -->
+    <div class="container hidden lg:block">
+        <h2 class="section-title text-5xl text-dark-text">Our Services</h2>
+        <div x-data="{ activeTab: 'consulting' }" class="tabs-container">
+            <!-- Tab Navigation -->
+            <div class="flex justify-center py-5  border-b border-[#e7e7e7] shadow-lg">
+                <button @click="activeTab = 'consulting'"
+                    :class="{'text-deep-plum border-b-[3px] border-deeptext-deep-plum': activeTab === 'consulting'}"
+                    class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-sans font-bold text-[#aaa] uppercase text-xl hover:text-deep-plum transition-colors">
+                    Consulting
+                </button>
+                <button @click="activeTab = 'va'"
+                    :class="{'text-deep-plum border-b-[3px] border-deeptext-deep-plum': activeTab === 'va'}"
+                    class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-sans font-bold text-[#aaa] uppercase text-xl hover:text-deep-plum transition-colors">
+                    VA Support
+                </button>
+                <button @click="activeTab = 'recruiting'"
+                    :class="{'text-deep-plum border-b-[3px] border-deeptext-deep-plum': activeTab === 'recruiting'}"
+                    class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-sans font-bold text-[#aaa] uppercase text-xl hover:text-deep-plum transition-colors">
+                    Recruiting
+                </button>
+                <button @click="activeTab = 'workshops'"
+                    :class="{'text-deep-plum border-b-[3px] border-deeptext-deep-plum': activeTab === 'workshops'}"
+                    class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-sans font-bold text-[#aaa] uppercase text-xl hover:text-deep-plum transition-colors">
+                    Workshops
+                </button>
+            </div>
+
+            <!-- Tab Panels -->
+            <div class="tabs-panels">
+                <!-- Consulting Panel -->
+                <div x-show="activeTab === 'consulting'" x-transition:enter="transition ease-out duration-300"
+                    x-transition:enter-start="opacity-0 transform translate-x-4"
+                    x-transition:enter-end="opacity-100 transform translate-x-0" class="tabs-panel">
+                    <div class="services-service-flex ">
+                        <div class="tabs-img">
+                            <img src="./assets/images/biz-consulting.jpg" class="shadow-2xl rounded-xl">
+                        </div>
+                        <div class="tabs-text pr-20">
+                            <h2 class="text-2xl text-dark-text">Business Consulting</h2>
+                            <p class="text-gray-600">Break through the plateau. We use psychology-backed time
+                                management and
+                                solution-focused strategies to get you back on track.</p>
+                            <ul class="tabs-check-list">
+                                <li class="text-gray-600">Operational Roadmaps</li>
+                                <li class="text-gray-600">Executive Efficiency Audits</li>
+                                <li class="text-gray-600">Growth Strategy Design</li>
+                            </ul>
+                            <div class="mt-12">
+                                <a href="https://calendly.com/mosaicbusinesssolutionsllc" target="_blank"
+                                    class="border border-deep-plum text-deep-plum px-6 py-3 rounded-[50px] font-semibold hover:bg-deep-plum hover:text-light-text transition-colors w-48">Speak
+                                    to an Expert</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Tab Panels -->
-                <div class="tabs-panels">
-                    <!-- Consulting Panel -->
-                    <div x-show="activeTab === 'consulting'" x-transition:enter="transition ease-out duration-300"
-                        x-transition:enter-start="opacity-0 transform translate-x-4"
-                        x-transition:enter-end="opacity-100 transform translate-x-0" class="tabs-panel">
-                        <div class="services-service-flex ">
-                            <div class="tabs-img">
-                                <img src="./assets/images/biz-consulting.jpg" class="shadow-2xl rounded-xl">
-                            </div>
-                            <div class="tabs-text pr-20">
-                                <h2 class="text-2xl text-dark-text">Business Consulting</h2>
-                                <p class="text-gray-600">Break through the plateau. We use psychology-backed time
-                                    management and
-                                    solution-focused strategies to get you back on track.</p>
-                                <ul class="tabs-check-list">
-                                    <li class="text-gray-600">Operational Roadmaps</li>
-                                    <li class="text-gray-600">Executive Efficiency Audits</li>
-                                    <li class="text-gray-600">Growth Strategy Design</li>
-                                </ul>
-                                <div class="mt-12">
-                                    <a href="https://calendly.com/mosaicbusinesssolutionsllc" target="_blank"
-                                        class="border border-deep-plum text-deep-plum px-6 py-3 rounded-[50px] font-semibold hover:bg-deep-plum hover:text-light-text transition-colors w-48">Speak
-                                        to an Expert</a>
-                                </div>
+
+                <!-- VA Panel -->
+                <div x-show="activeTab === 'va'" x-transition:enter="transition ease-out duration-300"
+                    x-transition:enter-start="opacity-0 transform translate-x-4"
+                    x-transition:enter-end="opacity-100 transform translate-x-0" class="tabs-panel">
+                    <div class="services-service-flex services-flex-reverse  ">
+                        <div class="tabs-img">
+                            <img src="./assets/images/va.jpg" class="shadow-2xl rounded-xl">
+                        </div>
+                        <div class="tabs-text pl-20">
+                            <h2 class="text-2xl text-dark-text">Virtual Support</h2>
+                            <p class="text-gray-600">Stop the revolving door. Our unique 4-step interactive
+                                interview process ensures you
+                                hire the right fit the first time.</p>
+                            <ul class="tabs-check-list">
+                                <li class="text-gray-600">Values-Based Hiring</li>
+                                <li class="text-gray-600">Interactive Interview Vetting</li>
+                                <li class="text-gray-600">Team-Fit Integration</li>
+                            </ul>
+                            <div class="mt-12">
+                                <a href="https://calendly.com/mosaicbusinesssolutionsllc" target="_blank"
+                                    class="border border-deep-plum text-deep-plum px-6 py-3 rounded-[50px] font-semibold hover:bg-deep-plum hover:text-light-text transition-colors w-48">Speak
+                                    to an Expert</a>
                             </div>
                         </div>
                     </div>
+                </div>
 
-
-                    <!-- VA Panel -->
-                    <div x-show="activeTab === 'va'" x-transition:enter="transition ease-out duration-300"
-                        x-transition:enter-start="opacity-0 transform translate-x-4"
-                        x-transition:enter-end="opacity-100 transform translate-x-0" class="tabs-panel">
-                        <div class="services-service-flex services-flex-reverse  ">
-                            <div class="tabs-img">
-                                <img src="./assets/images/va.jpg" class="shadow-2xl rounded-xl">
-                            </div>
-                            <div class="tabs-text pl-20">
-                                <h2 class="text-2xl text-dark-text">Virtual Support</h2>
-                                <p class="text-gray-600">Stop the revolving door. Our unique 4-step interactive
-                                    interview process ensures you
-                                    hire the right fit the first time.</p>
-                                <ul class="tabs-check-list">
-                                    <li class="text-gray-600">Values-Based Hiring</li>
-                                    <li class="text-gray-600">Interactive Interview Vetting</li>
-                                    <li class="text-gray-600">Team-Fit Integration</li>
-                                </ul>
-                                <div class="mt-12">
-                                    <a href="https://calendly.com/mosaicbusinesssolutionsllc" target="_blank"
-                                        class="border border-deep-plum text-deep-plum px-6 py-3 rounded-[50px] font-semibold hover:bg-deep-plum hover:text-light-text transition-colors w-48">Speak
-                                        to an Expert</a>
-                                </div>
+                <!-- Recruitment Panel -->
+                <div x-show="activeTab === 'recruiting'" x-transition:enter="transition ease-out duration-300"
+                    x-transition:enter-start="opacity-0 transform translate-x-4"
+                    x-transition:enter-end="opacity-100 transform translate-x-0" class="tabs-panel">
+                    <div class="services-service-flex ">
+                        <div class="tabs-img">
+                            <img src="./assets/images/recruit.png" class="shadow-2xl rounded-xl">
+                        </div>
+                        <div class="tabs-text pr-20">
+                            <h2 class="text-2xl text-dark-text">Staff Recruitment</h2>
+                            <p class="text-gray-600">Offload the busy work. From data entry to executive scheduling,
+                                we handle the details
+                                so you can lead your business.</p>
+                            <ul class="tabs-check-list">
+                                <li class="text-gray-600">Inbox & Calendar Management</li>
+                                <li class="text-gray-600">Data Organization</li>
+                                <li class="text-gray-600">Client Coordination</li>
+                            </ul>
+                            <div class="mt-12">
+                                <a href="https://calendly.com/mosaicbusinesssolutionsllc" target="_blank"
+                                    class="border border-deep-plum text-deep-plum px-6 py-3 rounded-[50px] font-semibold hover:bg-deep-plum hover:text-light-text transition-colors w-48">Speak
+                                    to an Expert</a>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Recruitment Panel -->
-                    <div x-show="activeTab === 'recruiting'" x-transition:enter="transition ease-out duration-300"
-                        x-transition:enter-start="opacity-0 transform translate-x-4"
-                        x-transition:enter-end="opacity-100 transform translate-x-0" class="tabs-panel">
-                        <div class="services-service-flex ">
-                            <div class="tabs-img">
-                                <img src="./assets/images/recruit.png" class="shadow-2xl rounded-xl">
-                            </div>
-                            <div class="tabs-text pr-20">
-                                <h2 class="text-2xl text-dark-text">Staff Recruitment</h2>
-                                <p class="text-gray-600">Offload the busy work. From data entry to executive scheduling,
-                                    we handle the details
-                                    so you can lead your business.</p>
-                                <ul class="tabs-check-list">
-                                    <li class="text-gray-600">Inbox & Calendar Management</li>
-                                    <li class="text-gray-600">Data Organization</li>
-                                    <li class="text-gray-600">Client Coordination</li>
-                                </ul>
-                                <div class="mt-12">
-                                    <a href="https://calendly.com/mosaicbusinesssolutionsllc" target="_blank"
-                                        class="border border-deep-plum text-deep-plum px-6 py-3 rounded-[50px] font-semibold hover:bg-deep-plum hover:text-light-text transition-colors w-48">Speak
-                                        to an Expert</a>
-                                </div>
-                            </div>
+                <!-- Workshops Panel -->
+                <div x-show="activeTab === 'workshops'" x-transition:enter="transition ease-out duration-300"
+                    x-transition:enter-start="opacity-0 transform translate-x-4"
+                    x-transition:enter-end="opacity-100 transform translate-x-0" class="tabs-panel">
+                    <div class="services-service-flex services-flex-reverse ">
+                        <div class="tabs-img">
+                            <img src="./assets/images/workshops.jpg" class="shadow-2xl rounded-xl">
+
                         </div>
-                    </div>
-
-                    <!-- Workshops Panel -->
-                    <div x-show="activeTab === 'workshops'" x-transition:enter="transition ease-out duration-300"
-                        x-transition:enter-start="opacity-0 transform translate-x-4"
-                        x-transition:enter-end="opacity-100 transform translate-x-0" class="tabs-panel">
-                        <div class="services-service-flex services-flex-reverse ">
-                            <div class="tabs-img">
-                                <img src="./assets/images/workshops.jpg" class="shadow-2xl rounded-xl">
-
-                            </div>
-                            <div class="tabs-text pl-20">
-                                <h2 class="text-2xl text-dark-text">Workshops</h2>
-                                <p class="text-gray-600">Custom-built training for your team, delivered in-person or
-                                    virtually, to solve your
-                                    specific bottlenecks and scale skillsets.</p>
-                                <ul class="tabs-check-list">
-                                    <li class="text-gray-600">Workflow Optimization</li>
-                                    <li class="text-gray-600">Communication Training</li>
-                                    <li class="text-gray-600">Custom SOP Development</li>
-                                </ul>
-                                <div class="mt-12">
-                                    <a href="https://calendly.com/mosaicbusinesssolutionsllc" target="_blank"
-                                        class="border border-deep-plum text-deep-plum px-6 py-3 rounded-[50px] font-semibold hover:bg-deep-plum hover:text-light-text transition-colors w-48">Speak
-                                        to an Expert</a>
-                                </div>
+                        <div class="tabs-text pl-20">
+                            <h2 class="text-2xl text-dark-text">Workshops</h2>
+                            <p class="text-gray-600">Custom-built training for your team, delivered in-person or
+                                virtually, to solve your
+                                specific bottlenecks and scale skillsets.</p>
+                            <ul class="tabs-check-list">
+                                <li class="text-gray-600">Workflow Optimization</li>
+                                <li class="text-gray-600">Communication Training</li>
+                                <li class="text-gray-600">Custom SOP Development</li>
+                            </ul>
+                            <div class="mt-12">
+                                <a href="https://calendly.com/mosaicbusinesssolutionsllc" target="_blank"
+                                    class="border border-deep-plum text-deep-plum px-6 py-3 rounded-[50px] font-semibold hover:bg-deep-plum hover:text-light-text transition-colors w-48">Speak
+                                    to an Expert</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <section class="services-timeline-section" style="margin-left: calc(-50vw + 50%); width: 100vw;">
-            <div class="container mx-auto px-4">
-                <h2 class="timeline-title text-5xl mb-8 text-center">Process Timeline</h2>
-                <p class="text-center text-gray-600 mb-16 max-w-4xl mx-auto text-lg">
-                    Our proven 6-step process ensures comprehensive business transformation. From discovery to
-                    sustainable growth, we guide you through each phase with expertise and precision.
-                </p>
+    <!-- Services Section MOBILE -->
+    <section class="lg:hidden" style="background-color: var(--powder-blue);">
+        <div class="container mx-auto px-6 py-16">
+            <h2 class="text-4xl font-serif text-dark-text mb-10 text-center">Our Services</h2>
 
-                <div class="services-timeline-path" x-data=" { active: 'discovery' }" style="position: relative;">
-                    <!-- Override CSS timeline line -->
-                    <style>
-                        .services-timeline-path::after {
-                            display: none !important;
-                        }
+            <div class="space-y-10">
+                <div class="bg-light-text rounded-2xl shadow-xl overflow-hidden flex flex-col">
+                    <img src="./assets/images/biz-consulting.jpg" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <h2 class="text-2xl font-bold text-dark-text mb-3">Business Consulting</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Break through the plateau. We use
+                            psychology-backed
+                            time management and solution-focused strategies to get you back on track.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start text-gray-600"><span
+                                    class="text-deep-plum mr-2 font-bold">✔</span>
+                                Operational Roadmaps</li>
+                            <li class="flex items-start text-gray-600"><span
+                                    class="text-deep-plum mr-2 font-bold">✔</span>
+                                Executive Efficiency Audits</li>
+                            <li class="flex items-start text-gray-600"><span
+                                    class="text-deep-plum mr-2 font-bold">✔</span>
+                                Growth Strategy Design</li>
+                        </ul>
+                        <a href="https://calendly.com/mosaicbusinesssolutionsllc" target="_blank"
+                            class="block text-center border-2 border-deep-plum text-deep-plum px-8 py-3 rounded-full font-bold hover:bg-deep-plum hover:text-white transition-all">
+                            Speak to an Expert
+                        </a>
+                    </div>
+                </div>
 
-                        /* Smooth Gradient for the progress bar */
-                        .progress-gradient {
-                            background: linear-gradient(90deg, #6eb9e2 25%, #aed1e3 50%, #f6dbc5 100%);
-                            box-shadow: 0 0 15px rgba(184, 115, 51, 0.5);
-                        }
+                <div class="bg-light-text rounded-2xl shadow-xl overflow-hidden flex flex-col">
+                    <img src="./assets/images/va.jpg" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <h2 class="text-2xl font-bold text-dark-text mb-3">Virtual Support</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Stop the revolving door. Our unique 4-step
+                            interactive
+                            interview process ensures you hire the right fit the first time.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start text-gray-600"><span
+                                    class="text-deep-plum mr-2 font-bold">✔</span>
+                                Values-Based Hiring</li>
+                            <li class="flex items-start text-gray-600"><span
+                                    class="text-deep-plum mr-2 font-bold">✔</span>
+                                Interactive Interview Vetting</li>
+                            <li class="flex items-start text-gray-600"><span
+                                    class="text-deep-plum mr-2 font-bold">✔</span>
+                                Team-Fit Integration</li>
+                        </ul>
+                        <a href="https://calendly.com/mosaicbusinesssolutionsllc" target="_blank"
+                            class="block text-center border-2 border-deep-plum text-deep-plum px-8 py-3 rounded-full font-bold hover:bg-deep-plum hover:text-white transition-all">
+                            Speak to an Expert
+                        </a>
+                    </div>
+                </div>
 
-                        /* Subtle pulse for the active milestone */
-                        .milestone-pulse {
-                            animation: shadow-pulse 2s infinite;
-                        }
+                <div class="bg-light-text rounded-2xl shadow-xl overflow-hidden flex flex-col">
+                    <img src="./assets/images/recruit.png" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <h2 class="text-2xl font-bold text-dark-text mb-3">Staff Recruitment</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Offload the busy work. From data entry to
+                            executive
+                            scheduling, we handle the details so you can lead your business.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start text-gray-600"><span
+                                    class="text-deep-plum mr-2 font-bold">✔</span>
+                                Inbox & Calendar Management</li>
+                            <li class="flex items-start text-gray-600"><span
+                                    class="text-deep-plum mr-2 font-bold">✔</span>
+                                Data Organization</li>
+                            <li class="flex items-start text-gray-600"><span
+                                    class="text-deep-plum mr-2 font-bold">✔</span>
+                                Client Coordination</li>
+                        </ul>
+                        <a href="https://calendly.com/mosaicbusinesssolutionsllc" target="_blank"
+                            class="block text-center border-2 border-deep-plum text-deep-plum px-8 py-3 rounded-full font-bold hover:bg-deep-plum hover:text-white transition-all">
+                            Speak to an Expert
+                        </a>
+                    </div>
+                </div>
 
-                        @keyframes shadow-pulse {
-                            0% {
-                                box-shadow: 0 0 0 0px rgba(184, 115, 51, 0.4);
-                            }
+                <div class="bg-light-text rounded-2xl shadow-xl overflow-hidden flex flex-col">
+                    <img src="./assets/images/workshops.jpg" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <h2 class="text-2xl font-bold text-dark-text mb-3">Workshops</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Custom-built training for your team, delivered
+                            in-person or virtually, to solve your specific bottlenecks and scale skillsets.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start text-gray-600"><span
+                                    class="text-deep-plum mr-2 font-bold">✔</span>
+                                Workflow Optimization</li>
+                            <li class="flex items-start text-gray-600"><span
+                                    class="text-deep-plum mr-2 font-bold">✔</span>
+                                Communication Training</li>
+                            <li class="flex items-start text-gray-600"><span
+                                    class="text-deep-plum mr-2 font-bold">✔</span>
+                                Custom SOP Development</li>
+                        </ul>
+                        <a href="https://calendly.com/mosaicbusinesssolutionsllc" target="_blank"
+                            class="block text-center border-2 border-deep-plum text-deep-plum px-8 py-3 rounded-full font-bold hover:bg-deep-plum hover:text-white transition-all">
+                            Speak to an Expert
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                            70% {
-                                box-shadow: 0 0 0 15px rgba(184, 115, 51, 0);
-                            }
+    <!-- Timeline Section MOBILE-->
+    <section class="lg:hidden py-16 px-6 bg-light-text">
+        <div class="max-w-md mx-auto">
+            <h2 class="text-4xl font-serif text-dark-text mb-4 text-center">Process Timeline</h2>
+            <p class="text-center text-gray-600 mb-12">Our proven 6-step process ensures comprehensive business
+                transformation.</p>
 
-                            100% {
-                                box-shadow: 0 0 0 0px rgba(184, 115, 51, 0);
-                            }
-                        }
-                    </style>
+            <div class="relative border-l-2 border-slate-200 ml-4 space-y-12">
 
-                    <!-- Horizontal Progress Bar -->
+                <div class="relative pl-10">
                     <div
-                        class="absolute left-0 top-1/2 w-full h-[2px] bg-slate-200/50 rounded-full -translate-y-1/2 z-0">
-                        <div class="progress-gradient h-full transition-all duration-1000 ease-in-out relative" :style="{
+                        class="absolute -left-[13px] top-20 w-6 h-6 rounded-full bg-light-text border-4 border-s1 z-10">
+                    </div>
+
+                    <div class="bg-light-text p-6 rounded-2xl shadow-xl border-t-4 border-s1">
+                        <span class="text-sm font-bold text-slate-400 uppercase tracking-widest">Step 01</span>
+                        <h3 class="text-xl font-bold text-dark-text mt-1">Discovery</h3>
+                        <p class="text-gray-600 mt-2">Free 30-minute initial consultation</p>
+                    </div>
+                </div>
+
+                <div class="relative pl-10">
+                    <div
+                        class="absolute -left-[13px] top-20 w-6 h-6 rounded-full bg-light-text border-4 border-s2 z-10">
+                    </div>
+
+                    <div class="bg-light-text p-6 rounded-2xl shadow-xl border-t-4 border-s2">
+                        <span class="text-sm font-bold text-slate-400 uppercase tracking-widest">Step 02</span>
+                        <h3 class="text-xl font-bold text-dark-text mt-1">Audit</h3>
+                        <p class="text-gray-600 mt-2">Solution-Focused to build on strengths and discuss solutions to
+                            address hurdles.</p>
+                    </div>
+                </div>
+
+                <div class="relative pl-10">
+                    <div
+                        class="absolute -left-[13px] top-20 w-6 h-6 rounded-full bg-light-text border-4 border-s3 z-10">
+                    </div>
+
+                    <div class="bg-light-text p-6 rounded-2xl shadow-xl border-t-4 border-s3">
+                        <span class="text-sm font-bold text-slate-400 uppercase tracking-widest">Step 03</span>
+                        <h3 class="text-xl font-bold text-dark-text mt-1">Strategy</h3>
+                        <p class="text-gray-600 mt-2">Discuss the details of the strengths that are working and hurdles
+                            that
+                            keep the business stuck.</p>
+                    </div>
+                </div>
+
+                <div class="relative pl-10">
+                    <div
+                        class="absolute -left-[13px] top-20 w-6 h-6 rounded-full bg-light-text border-4 border-s4 z-10">
+                    </div>
+
+                    <div class="bg-light-text p-6 rounded-2xl shadow-xl border-t-4 border-s4">
+                        <span class="text-sm font-bold text-slate-400 uppercase tracking-widest">Step 04</span>
+                        <h3 class="text-xl font-bold text-dark-text mt-1">Alignment</h3>
+                        <p class="text-gray-600 mt-2">Onboarding - Start-up Paperwork</p>
+                    </div>
+                </div>
+
+                <div class="relative pl-10">
+                    <div
+                        class="absolute -left-[13px] top-20 w-6 h-6 rounded-full bg-light-text border-4 border-s5 z-10">
+                    </div>
+
+                    <div class="bg-light-text p-6 rounded-2xl shadow-xl border-t-4 border-s5">
+                        <span class="text-sm font-bold text-slate-400 uppercase tracking-widest">Step 05</span>
+                        <h3 class="text-xl font-bold text-dark-text mt-1">Implementation</h3>
+                        <p class="text-gray-600 mt-2 text-sm leading-relaxed">We analyze your current business processes
+                            and
+                            identify opportunities for technological advancement and automation.</p>
+                    </div>
+                </div>
+
+                <div class="relative pl-10">
+                    <div
+                        class="absolute -left-[13px] top-20 w-6 h-6 rounded-full bg-light-text border-4 border-s6 z-10">
+                    </div>
+
+                    <div class="bg-light-text p-6 rounded-2xl shadow-xl border-t-4 border-s6">
+                        <span class="text-sm font-bold text-slate-400 uppercase tracking-widest">Step 06</span>
+                        <h3 class="text-xl font-bold text-dark-text mt-1">Growth</h3>
+                        <p class="text-gray-600 mt-2 text-sm leading-relaxed">Discuss ongoing client projects or offer
+                            an
+                            "open-door" invitation for future assistance.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section DESKTOP -->
+    <section class="services-timeline-section hidden lg:block" style="margin-left: calc(-50vw + 50%); width: 100vw;">
+        <div class="container mx-auto px-4">
+            <h2 class="timeline-title text-5xl mb-8 text-center">Process Timeline</h2>
+            <p class="text-center text-gray-600 mb-16 max-w-4xl mx-auto text-lg">
+                Our proven 6-step process ensures comprehensive business transformation. From discovery to
+                sustainable growth, we guide you through each phase with expertise and precision.
+            </p>
+
+            <div class="services-timeline-path" x-data=" { active: 'discovery' }" style="position: relative;">
+                <!-- Override CSS timeline line -->
+                <style>
+                    .services-timeline-path::after {
+                        display: none !important;
+                    }
+
+                    /* Smooth Gradient for the progress bar */
+                    .progress-gradient {
+                        background: linear-gradient(90deg, #6eb9e2 25%, #aed1e3 50%, #f6dbc5 100%);
+                        box-shadow: 0 0 15px rgba(184, 115, 51, 0.5);
+                    }
+
+                    /* Subtle pulse for the active milestone */
+                    .milestone-pulse {
+                        animation: shadow-pulse 2s infinite;
+                    }
+
+                    @keyframes shadow-pulse {
+                        0% {
+                            box-shadow: 0 0 0 0px rgba(184, 115, 51, 0.4);
+                        }
+
+                        70% {
+                            box-shadow: 0 0 0 15px rgba(184, 115, 51, 0);
+                        }
+
+                        100% {
+                            box-shadow: 0 0 0 0px rgba(184, 115, 51, 0);
+                        }
+                    }
+                </style>
+
+                <!-- Horizontal Progress Bar -->
+                <div class="absolute left-0 top-1/2 w-full h-[2px] bg-slate-200/50 rounded-full -translate-y-1/2 z-0">
+                    <div class="progress-gradient h-full transition-all duration-1000 ease-in-out relative" :style="{
                                     'discovery': 'width: 8.33%',
                                     'audit': 'width: 25%',
                                     'strategy': 'width: 41.66%',
@@ -312,79 +530,81 @@
                                     'execution': 'width: 75%',
                                     'growth': 'width: 100%'
                                 }[active]">
-                            <div
-                                class="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-white rounded-full blur-[2px] opacity-70">
-                            </div>
+                        <div
+                            class="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 bg-light-text rounded-full blur-[2px] opacity-70">
                         </div>
-                    </div>
-
-                    <div class="services-timeline-grid relative z-10">
-
-                        <div class="services-step-box services-s-1 cursor-pointer" @mouseenter="active = 'discovery'">
-                            <div class="services-step-desc">
-                                <h4 class="font-bold text-slate-600 mb-2 text-lg transition-colors duration-300"
-                                    :class="active === 'discovery' ? 'text-copper' : 'text-dark-text'">Discovery</h4>
-                                <p class="text-base text-slate-500">Free 30-minute initial consultation</p>
-                            </div>
-                            <div class="services-circle">01</div>
-                        </div>
-
-                        <div class="services-step-box services-s-2 cursor-pointer" @mouseenter="active = 'audit'">
-                            <div class="services-circle">02</div>
-                            <div class="services-step-desc">
-                                <h4 class="font-bold text-slate-600 mb-2 transition-colors duration-300"
-                                    :class="active === 'audit' ? 'text-copper' : 'text-dark-text'">Audit</h4>
-                                <p class="text-base text-slate-500">Solution-Focused to build on strengths and discuss
-                                    solutions to address hurdles</p>
-                            </div>
-                        </div>
-
-                        <div class="services-step-box services-s-3 cursor-pointer" @mouseenter="active = 'strategy'">
-                            <div class="services-step-desc">
-                                <h4 class="font-bold text-slate-600 mb-2 transition-colors duration-300"
-                                    :class="active === 'strategy' ? 'text-copper' : 'text-dark-text'">Strategy</h4>
-                                <p class="text-base text-slate-500">Discuss the details of the strengths that are
-                                    working and hurdles that keep the other business stuck.</p>
-                            </div>
-                            <div class="services-circle">03</div>
-                        </div>
-
-                        <div class="services-step-box services-s-4 cursor-pointer" @mouseenter="active = 'alignment'">
-                            <div class="services-circle">04</div>
-                            <div class="services-step-desc">
-                                <h4 class="font-bold text-slate-600 mb-2 transition-colors duration-300"
-                                    :class="active === 'alignment' ? 'text-copper' : 'text-dark-text'">Alignment</h4>
-                                <p class="text-base text-slate-500">Onboarding - Start-up Paperwork</p>
-                            </div>
-                        </div>
-
-                        <div class="services-step-box services-s-5 cursor-pointer" @mouseenter="active = 'execution'">
-                            <div class="services-step-desc">
-                                <h4 class="font-bold text-slate-600 mb-2 transition-colors duration-300"
-                                    :class="active === 'execution' ? 'text-copper' : 'text-dark-text'">
-                                    Implementation</h4>
-                                <p class=" text-dark-text text-sm">We analyze your current business processes and
-                                    identify opportunities for technological advancement and automation.</p>
-                            </div>
-                            <div class="services-circle">05</div>
-                        </div>
-
-                        <div class="services-step-box services-s-6 cursor-pointer" @mouseenter="active = 'growth'">
-                            <div class="services-circle">06</div>
-                            <div class="services-step-desc">
-                                <h4 class="font-bold text-slate-600 mb-2 transition-colors duration-300"
-                                    :class="active === 'growth' ? 'text-copper' : 'text-dark-text'">Growth</h4>
-                                <p class="text-base text-slate-500">Discuss ongoing client projects or, if
-                                    self-sufficient, offer an "open-door" invitation if the client needs assistance in
-                                    the future.</p>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
+
+                <div class="services-timeline-grid relative z-10">
+
+                    <div class="services-step-box services-s-1 cursor-pointer" @mouseenter="active = 'discovery'">
+                        <div class="services-step-desc">
+                            <h4 class="font-bold text-slate-600 mb-2 text-lg transition-colors duration-300"
+                                :class="active === 'discovery' ? 'text-copper' : 'text-dark-text'">Discovery</h4>
+                            <p class="text-base text-slate-500">Free 30-minute initial consultation</p>
+                        </div>
+                        <div class="services-circle">01</div>
+                    </div>
+
+                    <div class="services-step-box services-s-2 cursor-pointer" @mouseenter="active = 'audit'">
+                        <div class="services-circle">02</div>
+                        <div class="services-step-desc">
+                            <h4 class="font-bold text-slate-600 mb-2 transition-colors duration-300"
+                                :class="active === 'audit' ? 'text-copper' : 'text-dark-text'">Audit</h4>
+                            <p class="text-base text-slate-500">Solution-Focused to build on strengths and discuss
+                                solutions to address hurdles</p>
+                        </div>
+                    </div>
+
+                    <div class="services-step-box services-s-3 cursor-pointer" @mouseenter="active = 'strategy'">
+                        <div class="services-step-desc">
+                            <h4 class="font-bold text-slate-600 mb-2 transition-colors duration-300"
+                                :class="active === 'strategy' ? 'text-copper' : 'text-dark-text'">Strategy</h4>
+                            <p class="text-base text-slate-500">Discuss the details of the strengths that are
+                                working and hurdles that keep the other business stuck.</p>
+                        </div>
+                        <div class="services-circle">03</div>
+                    </div>
+
+                    <div class="services-step-box services-s-4 cursor-pointer" @mouseenter="active = 'alignment'">
+                        <div class="services-circle">04</div>
+                        <div class="services-step-desc">
+                            <h4 class="font-bold text-slate-600 mb-2 transition-colors duration-300"
+                                :class="active === 'alignment' ? 'text-copper' : 'text-dark-text'">Alignment</h4>
+                            <p class="text-base text-slate-500">Onboarding - Start-up Paperwork</p>
+                        </div>
+                    </div>
+
+                    <div class="services-step-box services-s-5 cursor-pointer" @mouseenter="active = 'execution'">
+                        <div class="services-step-desc">
+                            <h4 class="font-bold text-slate-600 mb-2 transition-colors duration-300"
+                                :class="active === 'execution' ? 'text-copper' : 'text-dark-text'">
+                                Implementation</h4>
+                            <p class=" text-dark-text text-sm">We analyze your current business processes and
+                                identify opportunities for technological advancement and automation.</p>
+                        </div>
+                        <div class="services-circle">05</div>
+                    </div>
+
+                    <div class="services-step-box services-s-6 cursor-pointer" @mouseenter="active = 'growth'">
+                        <div class="services-circle">06</div>
+                        <div class="services-step-desc">
+                            <h4 class="font-bold text-slate-600 mb-2 transition-colors duration-300"
+                                :class="active === 'growth' ? 'text-copper' : 'text-dark-text'">Growth</h4>
+                            <p class="text-base text-slate-500">Discuss ongoing client projects or, if
+                                self-sufficient, offer an "open-door" invitation if the client needs assistance in
+                                the future.</p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonial will be injected here-->
     <div id="testimonial-placeholder"></div>
 
     <!-- CTA will be injected here -->
