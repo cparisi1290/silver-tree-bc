@@ -9,8 +9,8 @@
         content="Silver Tree provides comprehensive business consulting services including strategic planning, virtual assistance, staff recruiting, and custom workshops. Our 6-step process ensures your business achieves sustainable growth and success.">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-    <link rel="apple-touch-icon" href="/assets/images/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/images/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -60,8 +60,7 @@
 <body>
     <div id="nav-placeholder"></div>
 
-    <section
-        class="relative min-h-[600px] md:min-h-[800px] flex items-center justify-center overflow-hidden py-12 md:py-0">
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden py-12 md:py-0">
 
         <div class="absolute inset-0 z-0">
             <img src="./assets/images/silver-tree-right.png" alt="Background"
@@ -73,25 +72,25 @@
                 class="bg-light-text mx-auto px-6 py-12 md:px-[80px] md:h-[450px] w-full max-w-[1200px] rounded-[24px] shadow-2xl flex items-center relative">
 
                 <div class="w-full lg:w-[65%] z-10 text-center md:text-left">
-                    <h1 class="text-3xl md:text-6xl text-deep-plum mb-6 leading-[1.1] tracking-tight font-serif">
+                    <h1 class="text-5xl md:text-6xl text-deep-plum mb-6 leading-[1.1] tracking-tight font-serif">
                         Professional support you need to scale and <span
-                            class="text-copper italic text-4xl lg:text-7xl">soar</span>
+                            class="text-copper italic text-6xl lg:text-7xl">soar</span>
                     </h1>
 
                     <p
-                        class="text-base md:text-2xl text-dark-text mb-10 font-light leading-relaxed max-w-[550px] mx-auto md:mx-0">
+                        class="text-lg md:text-2xl text-dark-text mb-10 font-light leading-relaxed max-w-[550px] mx-auto md:mx-0">
                         Our business solutions will help you achieve new levels of stability and success.
                     </p>
 
                     <a href="https://calendly.com/mosaicbusinesssolutionsllc" target="_blank"
-                        class="inline-block bg-deep-plum text-light-text px-8 md:px-12 py-4 rounded-full font-semibold hover:scale-105 transition-all shadow-lg text-sm md:text-base">
+                        class="inline-block bg-deep-plum text-light-text px-8 md:px-12 py-4 rounded-full font-semibold hover:scale-105 transition-all shadow-lg text-sm md:text-base shadow-xl">
                         Get Started Now
                     </a>
                 </div>
 
                 <div
                     class="hidden lg:block absolute -right-24 top-1/2 -translate-y-1/2 z-20 w-[520px] h-[600px] rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
-                    <img src="/assets/images/services-hero.jpg" alt="Coffee Chat" class="w-full h-full object-cover" />
+                    <img src="./assets/images/services-hero.jpg" alt="Coffee Chat" class="w-full h-full object-cover" />
                 </div>
             </div>
         </div>
@@ -99,28 +98,69 @@
 
 
     <!-- Tabbed Services Section ON DESKTOP -->
+    <script>
+        // Prevent initial browser scroll if there's a hash
+        if (window.location.hash) {
+            window.scrollTo(0, 0);
+        }
+    </script>
+    <style>
+        /* Custom tab styling to override any conflicts */
+        .tabs-container button {
+            border-bottom: 3px solid transparent !important;
+        }
+
+        .tabs-container button.text-deep-plum {
+            color: #664875 !important;
+            border-bottom-color: #664875 !important;
+        }
+
+        /* Timeline circles - no background, colored borders and numbers */
+        .services-timeline-path .services-circle {
+            background: var(--light-text) !important;
+            border: 5px solid var(--step-color) !important;
+            color: color-mix(in srgb, var(--step-color) 90%, black) !important;
+            box-shadow: none !important;
+        }
+    </style>
+
     <div class="container hidden lg:block mt-40">
         <h2 class="section-title text-5xl text-dark-text">Our Services</h2>
-        <div x-data="{ activeTab: 'consulting' }" class="tabs-container">
+        <div x-data="{ 
+            activeTab: 'consulting',
+            init() {
+                const hash = window.location.hash.substring(1);
+                if (hash) {
+                    this.activeTab = hash;
+                    // Use requestAnimationFrame for smoother scroll
+                    requestAnimationFrame(() => {
+                        const servicesSection = this.$el.closest('.container.hidden.lg\\:block');
+                        if (servicesSection) {
+                            servicesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    });
+                }
+            }
+        }" class="tabs-container">
             <!-- Tab Navigation -->
             <div class="flex justify-center py-5  border-b border-[#e7e7e7] shadow-lg">
                 <button @click="activeTab = 'consulting'"
-                    :class="{'text-deep-plum border-b-[3px] border-deeptext-deep-plum': activeTab === 'consulting'}"
+                    :class="{'text-deep-plum border-b-[3px] border-deep-plum !important': activeTab === 'consulting'}"
                     class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-sans font-bold text-[#aaa] uppercase text-xl hover:text-deep-plum transition-colors">
                     Consulting
                 </button>
-                <button @click="activeTab = 'va'"
-                    :class="{'text-deep-plum border-b-[3px] border-deeptext-deep-plum': activeTab === 'va'}"
+                <button @click="activeTab = 'virtual-assistance'"
+                    :class="{'text-deep-plum border-b-[3px] border-deep-plum !important': activeTab === 'virtual-assistance'}"
                     class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-sans font-bold text-[#aaa] uppercase text-xl hover:text-deep-plum transition-colors">
                     VA Support
                 </button>
                 <button @click="activeTab = 'recruiting'"
-                    :class="{'text-deep-plum border-b-[3px] border-deeptext-deep-plum': activeTab === 'recruiting'}"
+                    :class="{'text-deep-plum border-b-[3px] border-deep-plum !important': activeTab === 'recruiting'}"
                     class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-sans font-bold text-[#aaa] uppercase text-xl hover:text-deep-plum transition-colors">
                     Recruiting
                 </button>
                 <button @click="activeTab = 'workshops'"
-                    :class="{'text-deep-plum border-b-[3px] border-deeptext-deep-plum': activeTab === 'workshops'}"
+                    :class="{'text-deep-plum border-b-[3px] border-deep-plum !important': activeTab === 'workshops'}"
                     class="px-[30px] py-[15px] cursor-pointer border-none bg-transparent font-sans font-bold text-[#aaa] uppercase text-xl hover:text-deep-plum transition-colors">
                     Workshops
                 </button>
@@ -149,7 +189,7 @@
                             </ul>
                             <div class="mt-12">
                                 <a href="https://calendly.com/mosaicbusinesssolutionsllc" target="_blank"
-                                    class="border border-deep-plum text-deep-plum px-6 py-3 rounded-[50px] font-semibold hover:bg-deep-plum hover:text-light-text transition-colors w-48">Speak
+                                    class="border-2 border-deep-plum text-deep-plum px-6 py-3 rounded-[50px] font-semibold hover:bg-deep-plum hover:text-light-text transition-colors w-48 shadow-lg">Speak
                                     to an Expert</a>
                             </div>
                         </div>
@@ -158,7 +198,7 @@
 
 
                 <!-- VA Panel -->
-                <div x-show="activeTab === 'va'" x-transition:enter="transition ease-out duration-300"
+                <div x-show="activeTab === 'virtual-assistance'" x-transition:enter="transition ease-out duration-300"
                     x-transition:enter-start="opacity-0 transform translate-x-4"
                     x-transition:enter-end="opacity-100 transform translate-x-0" class="tabs-panel">
                     <div class="services-service-flex services-flex-reverse  ">
@@ -177,7 +217,7 @@
                             </ul>
                             <div class="mt-12">
                                 <a href="https://calendly.com/mosaicbusinesssolutionsllc" target="_blank"
-                                    class="border border-deep-plum text-deep-plum px-6 py-3 rounded-[50px] font-semibold hover:bg-deep-plum hover:text-light-text transition-colors w-48">Speak
+                                    class="border-2 border-deep-plum text-deep-plum px-6 py-3 rounded-[50px] font-semibold hover:bg-deep-plum hover:text-light-text transition-colors w-48 shadow-lg">Speak
                                     to an Expert</a>
                             </div>
                         </div>
@@ -207,7 +247,7 @@
                             </ul>
                             <div class="mt-12">
                                 <a href="https://calendly.com/mosaicbusinesssolutionsllc" target="_blank"
-                                    class="border border-deep-plum text-deep-plum px-6 py-3 rounded-[50px] font-semibold hover:bg-deep-plum hover:text-light-text transition-colors w-48">Speak
+                                    class="border-2 border-deep-plum text-deep-plum px-6 py-3 rounded-[50px] font-semibold hover:bg-deep-plum hover:text-light-text transition-colors w-48 shadow-lg">Speak
                                     to an Expert</a>
                             </div>
                         </div>
@@ -237,7 +277,7 @@
                             </ul>
                             <div class="mt-12">
                                 <a href="https://calendly.com/mosaicbusinesssolutionsllc" target="_blank"
-                                    class="border border-deep-plum text-deep-plum px-6 py-3 rounded-[50px] font-semibold hover:bg-deep-plum hover:text-light-text transition-colors w-48">Speak
+                                    class="border-2 border-deep-plum text-deep-plum px-6 py-3 rounded-[50px] font-semibold hover:bg-deep-plum hover:text-light-text transition-colors w-48 shadow-lg">Speak
                                     to an Expert</a>
                             </div>
                         </div>
@@ -248,7 +288,7 @@
     </div>
 
     <!-- Services Section MOBILE -->
-    <section class="lg:hidden" style="background-color: var(--powder-blue);">
+    <section class="lg:hidden">
         <div class="container mx-auto px-6 py-16">
             <h2 class="text-4xl font-serif text-dark-text mb-10 text-center">Our Services</h2>
 
@@ -271,7 +311,7 @@
                                 rhythm</li>
                         </ul>
                         <a href="https://calendly.com/mosaicbusinesssolutionsllc" target="_blank"
-                            class="block text-center border-2 border-deep-plum text-deep-plum px-8 py-3 rounded-full font-bold hover:bg-deep-plum hover:text-white transition-all">
+                            class="block text-center border-2 border-deep-plum text-deep-plum px-8 py-3 rounded-full font-bold hover:bg-deep-plum hover:text-white transition-all shadow-lg">
                             Speak to an Expert
                         </a>
                     </div>
@@ -294,7 +334,7 @@
                                 Preparing presentations and workshops</li>
                         </ul>
                         <a href="https://calendly.com/mosaicbusinesssolutionsllc" target="_blank"
-                            class="block text-center border-2 border-deep-plum text-deep-plum px-8 py-3 rounded-full font-bold hover:bg-deep-plum hover:text-white transition-all">
+                            class="block text-center border-2 border-deep-plum text-deep-plum px-8 py-3 rounded-full font-bold hover:bg-deep-plum hover:text-white transition-all shadow-lg">
                             Speak to an Expert
                         </a>
                     </div>
@@ -316,7 +356,7 @@
                                 Client Coordination</li>
                         </ul>
                         <a href="https://calendly.com/mosaicbusinesssolutionsllc" target="_blank"
-                            class="block text-center border-2 border-deep-plum text-deep-plum px-8 py-3 rounded-full font-bold hover:bg-deep-plum hover:text-white transition-all">
+                            class="block text-center border-2 border-deep-plum text-deep-plum px-8 py-3 rounded-full font-bold hover:bg-deep-plum hover:text-white transition-all shadow-lg">
                             Speak to an Expert
                         </a>
                     </div>
@@ -339,7 +379,7 @@
                                 team-building exercises</li>
                         </ul>
                         <a href="https://calendly.com/mosaicbusinesssolutionsllc" target="_blank"
-                            class="block text-center border-2 border-deep-plum text-deep-plum px-8 py-3 rounded-full font-bold hover:bg-deep-plum hover:text-white transition-all">
+                            class="block text-center border-2 border-deep-plum text-deep-plum px-8 py-3 rounded-full font-bold hover:bg-deep-plum hover:text-white transition-all shadow-lg">
                             Speak to an Expert
                         </a>
                     </div>
@@ -348,12 +388,12 @@
         </div>
     </section>
 
-    <div class="bg-powder-blue">
+    <div class="bg-powder-blue/80">
         <section class="py-16 md:py-[120px] lg:py-[100px] container mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-[60px] items-center">
 
                 <div class="relative flex justify-center order-1 lg:order-2">
-                    <img src="/assets/images/difference.jpg" alt="What Makes Us Different"
+                    <img src="./assets/images/difference.jpg" alt="What Makes Us Different"
                         class="w-full md:w-3/4 h-[80vh] max-h-[600px] object-cover rounded-2xl shadow-xl">
                 </div>
 
@@ -547,8 +587,9 @@
                 </style>
 
                 <!-- Horizontal Progress Bar -->
-                <div class="absolute left-0 top-1/2 w-full h-[2px] bg-slate-200/50 rounded-full -translate-y-1/2 z-0">
-                    <div class="progress-gradient h-full transition-all duration-1000 ease-in-out relative" :style="{
+                <div class="absolute left-0 top-1/2 w-full h-[4px] bg-slate-200/50 rounded-full -translate-y-1/2 z-0">
+                    <div class="progress-gradient h-full transition-all duration-1000 ease-in-out relative rounded-full"
+                        :style="{
                                     'discovery': 'width: 8.33%',
                                     'audit': 'width: 25%',
                                     'strategy': 'width: 41.66%',
@@ -644,8 +685,8 @@
     <!-- Footer will be injected here -->
     <div id="footer-placeholder"></div>
 
-    <script src="./assets/js/components.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

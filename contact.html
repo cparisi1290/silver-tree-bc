@@ -9,8 +9,8 @@
         content="Ready to transform your business? Contact Silver Tree for expert business consulting services. Schedule a call with our team of experienced consultants and take the first step toward sustainable growth.">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-    <link rel="apple-touch-icon" href="/assets/images/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/images/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -80,7 +80,7 @@
                             can help you scale smarter and faster.
                         </p>
                         <a href="https://calendly.com/mosaicbusinesssolutionsllc" target="_blank"
-                            class="inline-block w-full md:w-auto text-center bg-deep-plum text-light-text px-8 py-4 rounded-[50px] font-semibold hover:bg-opacity-90 transition-colors">
+                            class="inline-block w-full md:w-auto text-center bg-deep-plum text-light-text px-8 py-4 rounded-[50px] font-semibold hover:bg-opacity-90 transition-colors shadow-xl">
                             Schedule Consultation
                         </a>
                     </div>
@@ -150,13 +150,13 @@
                                     <button @click="activeFaq = activeFaq === 'q1' ? null : 'q1'"
                                         class="w-full flex items-center justify-between py-6 md:py-8 text-left outline-none">
                                         <span class="text-base md:text-lg transition-all duration-300 pr-4"
-                                            :class="activeFaq === 'q1' ? 'text-deep-plum font-bold' : 'text-dark-text font-medium'">
+                                            :class="activeFaq === 'q1' ? 'text-dark-text font-bold' : 'text-dark-text font-medium'">
                                             What kinds of businesses do you work with?
                                         </span>
                                         <div class="flex-shrink-0 w-8 h-8 rounded-full border transition-all duration-300 flex items-center justify-center"
-                                            :class="activeFaq === 'q1' ? 'border-copper border-2' : 'border-gray-200 group-hover:border-gray-400'">
+                                            :class="activeFaq === 'q1' ? 'border-copper border-2' : 'border-deep-plum border-2'">
                                             <i class="fas fa-plus text-[10px] transition-transform duration-500"
-                                                :class="activeFaq === 'q1' ? 'rotate-45 text-copper' : 'text-gray-400'"></i>
+                                                :class="activeFaq === 'q1' ? 'rotate-45 text-copper' : 'text-deep-plum font-bold'"></i>
                                         </div>
                                     </button>
                                     <div x-show="activeFaq === 'q1'" x-collapse>
@@ -176,13 +176,13 @@
                                     <button @click="activeFaq = activeFaq === 'q2' ? null : 'q2'"
                                         class="w-full flex items-center justify-between py-6 md:py-8 text-left outline-none">
                                         <span class="text-base md:text-lg transition-all duration-300 pr-4"
-                                            :class="activeFaq === 'q2' ? 'text-deep-plum font-bold' : 'text-dark-text font-medium'">
+                                            :class="activeFaq === 'q2' ? 'text-dark-text font-bold' : 'text-dark-text font-medium'">
                                             How is your approach different from other consultants?
                                         </span>
                                         <div class="flex-shrink-0 w-8 h-8 rounded-full border transition-all duration-300 flex items-center justify-center"
-                                            :class="activeFaq === 'q2' ? 'border-copper border-2' : 'border-gray-200 group-hover:border-gray-400'">
+                                            :class="activeFaq === 'q2' ? 'border-copper border-2' : 'border-deep-plum border-2'">
                                             <i class="fas fa-plus text-[10px] transition-transform duration-500"
-                                                :class="activeFaq === 'q2' ? 'rotate-45 text-copper' : 'text-gray-400'"></i>
+                                                :class="activeFaq === 'q2' ? 'rotate-45 text-copper' : 'text-deep-plum'"></i>
                                         </div>
                                     </button>
                                     <div x-show="activeFaq === 'q2'" x-collapse>
@@ -203,13 +203,13 @@
                                     <button @click="activeFaq = activeFaq === 'q3' ? null : 'q3'"
                                         class="w-full flex items-center justify-between py-6 md:py-8 text-left outline-none">
                                         <span class="text-base md:text-lg transition-all duration-300 pr-4"
-                                            :class="activeFaq === 'q3' ? 'text-deep-plum font-bold' : 'text-dark-text font-medium'">
+                                            :class="activeFaq === 'q3' ? 'text-dark-text font-bold' : 'text-dark-text font-medium'">
                                             What does it look like to work with you?
                                         </span>
                                         <div class="flex-shrink-0 w-8 h-8 rounded-full border transition-all duration-300 flex items-center justify-center"
-                                            :class="activeFaq === 'q3' ? 'border-copper border-2' : 'border-gray-200 group-hover:border-gray-400'">
+                                            :class="activeFaq === 'q3' ? 'border-copper border-2' : 'border-deep-plum border-2'">
                                             <i class="fas fa-plus text-[10px] transition-transform duration-500"
-                                                :class="activeFaq === 'q3' ? 'rotate-45 text-copper' : 'text-gray-400'"></i>
+                                                :class="activeFaq === 'q3' ? 'rotate-45 text-copper' : 'text-deep-plum'"></i>
                                         </div>
                                     </button>
                                     <div x-show="activeFaq === 'q3'" x-collapse>
@@ -229,13 +229,13 @@
                                     <button @click="activeFaq = activeFaq === 'q4' ? null : 'q4'"
                                         class="w-full flex items-center justify-between py-6 md:py-8 text-left outline-none">
                                         <span class="text-base md:text-lg transition-all duration-300 pr-4"
-                                            :class="activeFaq === 'q4' ? 'text-deep-plum font-bold' : 'text-dark-text font-medium'">
+                                            :class="activeFaq === 'q4' ? 'text-dark-text font-bold' : 'text-dark-text font-medium'">
                                             Do I need all of your services to get started?
                                         </span>
                                         <div class="flex-shrink-0 w-8 h-8 rounded-full border transition-all duration-300 flex items-center justify-center"
-                                            :class="activeFaq === 'q4' ? 'border-copper border-2' : 'border-gray-200 group-hover:border-gray-400'">
+                                            :class="activeFaq === 'q4' ? 'border-copper border-2' : 'border-deep-plum border-2'">
                                             <i class="fas fa-plus text-[10px] transition-transform duration-500"
-                                                :class="activeFaq === 'q4' ? 'rotate-45 text-copper' : 'text-gray-400'"></i>
+                                                :class="activeFaq === 'q4' ? 'rotate-45 text-copper' : 'text-deep-plum'"></i>
                                         </div>
                                     </button>
                                     <div x-show="activeFaq === 'q4'" x-collapse>
@@ -255,13 +255,13 @@
                                     <button @click="activeFaq = activeFaq === 'q5' ? null : 'q5'"
                                         class="w-full flex items-center justify-between py-6 md:py-8 text-left outline-none">
                                         <span class="text-base md:text-lg transition-all duration-300 pr-4"
-                                            :class="activeFaq === 'q5' ? 'text-deep-plum font-bold' : 'text-dark-text font-medium'">
+                                            :class="activeFaq === 'q5' ? 'text-dark-text font-bold' : 'text-dark-text font-medium'">
                                             What can I expect from working with your team?
                                         </span>
                                         <div class="flex-shrink-0 w-8 h-8 rounded-full border transition-all duration-300 flex items-center justify-center"
-                                            :class="activeFaq === 'q5' ? 'border-copper border-2' : 'border-gray-200 group-hover:border-gray-400'">
+                                            :class="activeFaq === 'q5' ? 'border-copper border-2' : 'border-deep-plum border-2'">
                                             <i class="fas fa-plus text-[10px] transition-transform duration-500"
-                                                :class="activeFaq === 'q5' ? 'rotate-45 text-copper' : 'text-gray-400'"></i>
+                                                :class="activeFaq === 'q5' ? 'rotate-45 text-copper' : 'text-deep-plum'"></i>
                                         </div>
                                     </button>
                                     <div x-show="activeFaq === 'q5'" x-collapse>
@@ -298,8 +298,8 @@
     <!-- Footer will be injected here -->
     <div id="footer-placeholder"></div>
 
-    <script src="./assets/js/components.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
